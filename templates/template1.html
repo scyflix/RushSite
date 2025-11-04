@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Template</title>
+
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --text: #ffffff;
+        --accent1: #6c63ff;
+        --accent2: #00d4ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+        padding: 20px;
+      }
+
+      section.hero {
+        text-align: center;
+        max-width: 850px;
+        margin: auto;
+        position: relative;
+      }
+
+      .bg-blur {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        background: linear-gradient(135deg, var(--accent1), var(--accent2));
+        filter: blur(120px);
+        opacity: 0.35;
+        z-index: -1;
+        border-radius: 50%;
+      }
+      .bg-blur.bl1 {
+        top: -50px;
+        left: -80px;
+      }
+      .bg-blur.bl2 {
+        bottom: -60px;
+        right: -80px;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      p {
+        margin: 18px auto 26px;
+        opacity: 0.8;
+        font-size: 1.1rem;
+        max-width: 550px;
+        line-height: 1.6;
+      }
+
+      .btns {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 25px;
+      }
+
+      button {
+        padding: 12px 22px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      button:hover {
+        opacity: 0.7;
+      }
+      .resetbtn {
+        margin-bottom: 20px;
+        top: 20px;
+        right: 20px;
+        background: #ff4d4d;
+        color: #fff;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+      .primary {
+        background: linear-gradient(135deg, var(--accent1), var(--accent2));
+        color: #fff;
+      }
+
+      .secondary {
+        background: rgba(255, 255, 255, 0.08);
+        color: #fff;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .secondary:hover {
+        border-color: rgba(255, 255, 255, 0.35);
+      }
+      #contact {
+        max-width: 600px;
+        margin: 60px auto 0;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        display: none;
+      }
+      #projects {
+        max-width: 800px;
+        margin: 60px auto 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      #projects h2 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      #projects .project-list {
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      @media (max-width: 700px) {
+        #projects .project-list {
+          flex-direction: column;
+        }
+      }
+      .project-item {
+        width: 350px;
+        margin: 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .project-item:hover {
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="resetbtn" onclick="removeEdit()">Reset</button>
+    <main>
+      <section class="hero">
+        <div class="bg-blur bl1"></div>
+        <div class="bg-blur bl2"></div>
+
+        <h1 contenteditable data-field="hero-title">
+          Hi, I'm <span>Your Name</span>
+        </h1>
+        <p contenteditable data-field="hero-text">
+          Front-end Developer & UI Enthusiast — building sleek digital
+          experiences.
+        </p>
+
+        <div class="btns">
+          <button class="primary">Get in Touch</button>
+          <button class="secondary">View Projects</button>
+        </div>
+      </section>
+
+      <!--CONTACT SECTION-->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p contenteditable data-field="contact-text">
+          Feel free to reach out for collaborations or just a friendly hello!
+        </p>
+        <p>
+          Email:
+          <span contenteditable data-field="contact-email"
+            >youremail@gmail.com</span
+          >
+        </p>
+        <p>
+          Phone:
+          <span contenteditable data-field="contact-phone">+49123456789</span>
+        </p>
+      </section>
+
+      <!--PROJECTS SECTION-->
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-list">
+          <div class="project-item">
+            <h3 contenteditable data-field="project1-title">Project One</h3>
+            <p contenteditable data-field="project1-desc">
+              A brief description of Project One goes here.
+            </p>
+          </div>
+          <div class="project-item">
+            <h3 contenteditable data-field="project2-title">Project Two</h3>
+            <p contenteditable data-field="project2-desc">
+              A brief description of Project Two goes here.
+            </p>
+          </div>
+          <div class="project-item">
+            <h3 contenteditable data-field="project3-title">Project Three</h3>
+            <p contenteditable data-field="project3-desc">
+              A brief description of Project Three goes here.
+            </p>
+          </div>
+          <div class="project-item">
+            <h3 contenteditable data-field="project4-title">Project Four</h3>
+            <p contenteditable data-field="project4-desc">
+              A brief description of Project Four goes here.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const primaryBtn = document.querySelector(".primary");
+      const secondaryBtn = document.querySelector(".secondary");
+      const contactSection = document.getElementById("contact");
+      const projectsSection = document.getElementById("projects");
+      primaryBtn.addEventListener("click", () => {
+        contactSection.style.display = "block";
+        projectsSection.style.display = "none";
+      });
+      secondaryBtn.addEventListener("click", () => {
+        projectsSection.style.display = "flex";
+        contactSection.style.display = "none";
+      });
+      function removeEdit() {
+        const yes = confirm("Clear all saved edits?");
+        if (!yes) return;
+
+        localStorage.clear();
+        location.reload();
+      }
+      document
+        .querySelectorAll("[contenteditable][data-field]")
+        .forEach((element) => {
+          // Load saved value
+          const saved = localStorage.getItem(element.dataset.field);
+          if (saved) element.innerHTML = saved;
+
+          // Save when typing
+          element.addEventListener("input", () =>
+            localStorage.setItem(element.dataset.field, element.innerHTML)
+          );
+        });
+    </script>
+  </body>
+</html>
