@@ -24,7 +24,6 @@
         background: var(--bg);
         color: var(--text);
         overflow-x: hidden;
-        padding: 20px;
       }
 
       section.hero {
@@ -85,15 +84,27 @@
       button:hover {
         opacity: 0.7;
       }
-      .resetbtn {
+      #action {
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+        margin: 10px 0 0 10px;
+      }
+      .actionbtn {
         margin-bottom: 20px;
         top: 20px;
         right: 20px;
-        background: #ff4d4d;
         color: #fff;
         border-radius: 6px;
         padding: 8px 12px;
         font-size: 0.9rem;
+      }
+      #resetbtn {
+        background: #ff4d4d;
+      }
+      #downloadbtn {
+        background: #4caf50;
       }
       .primary {
         background: linear-gradient(135deg, var(--accent1), var(--accent2));
@@ -119,7 +130,6 @@
         display: none;
       }
       #projects {
-        max-width: 800px;
         margin: 60px auto 0;
         display: none;
         justify-content: center;
@@ -151,10 +161,60 @@
         border-color: rgba(255, 255, 255, 0.3);
       }
     </style>
+    <style id="editorStyle">
+      h1 {
+        margin: 0 10px;
+      }
+      header {
+        background: #0a172b;
+        width: 100vw;
+        margin: 0;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      header nav a {
+        text-decoration: none;
+        color: #fafafa;
+        margin: 0 15px;
+        font-size: 1em;
+        font-weight: 600;
+      }
+      header nav a:hover {
+        color: #6366f1;
+      }
+      a.logo {
+        text-decoration: none;
+        color: #fafafa;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0 16px;
+        margin-bottom: 1em;
+      }
+    </style>
   </head>
 
   <body>
-    <button class="resetbtn" onclick="removeEdit()">Reset</button>
+    <header id="header">
+      <a href="../index.html" class="logo"> RushSite⚡ </a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../templates.html">Templates</a>
+      </nav>
+    </header>
+    <div id="action">
+      <button id="resetbtn" class="actionbtn" onclick="removeEdit()">
+        Reset
+      </button>
+      <button id="downloadbtn" class="actionbtn" onclick="exportHTML()">
+        Export HTML
+      </button>
+    </div>
+
     <main>
       <section class="hero">
         <div class="bg-blur bl1"></div>
@@ -223,19 +283,7 @@
         </div>
       </section>
     </main>
-    <script>
-      const primaryBtn = document.querySelector(".primary");
-      const secondaryBtn = document.querySelector(".secondary");
-      const contactSection = document.getElementById("contact");
-      const projectsSection = document.getElementById("projects");
-      primaryBtn.addEventListener("click", () => {
-        contactSection.style.display = "block";
-        projectsSection.style.display = "none";
-      });
-      secondaryBtn.addEventListener("click", () => {
-        projectsSection.style.display = "flex";
-        contactSection.style.display = "none";
-      });
+    <script class="editorScript">
       function removeEdit() {
         const yes = confirm("Clear all saved edits?");
         if (!yes) return;
@@ -255,6 +303,64 @@
             localStorage.setItem(element.dataset.field, element.innerHTML)
           );
         });
+    </script>
+    <script>
+      const primaryBtn = document.querySelector(".primary");
+      const secondaryBtn = document.querySelector(".secondary");
+      const contactSection = document.getElementById("contact");
+      const projectsSection = document.getElementById("projects");
+      primaryBtn.addEventListener("click", () => {
+        contactSection.style.display = "block";
+        projectsSection.style.display = "none";
+      });
+      secondaryBtn.addEventListener("click", () => {
+        projectsSection.style.display = "flex";
+        contactSection.style.display = "none";
+      });
+
+      //download html file
+      function exportHTML() {
+        const downloadBtn = document.getElementById("downloadbtn");
+        setTimeout(() => {
+          downloadBtn.innerText = "Exporting...";
+        }, 1000);
+        setTimeout(() => {
+          downloadBtn.innerText = "Exported";
+        }, 2000);
+        setTimeout(() => {
+          downloadBtn.innerText = "Export HTML";
+        }, 3000);
+
+        // Clone the whole HTML document
+        const doc = document.documentElement.cloneNode(true);
+
+        // Remove contenteditable + data-field attributes
+        doc.querySelectorAll("[contenteditable]").forEach((element) => {
+          element.removeAttribute("contenteditable");
+          element.removeAttribute("data-field");
+        });
+        // Remove reset & export buttons
+        doc.querySelectorAll(".actionbtn").forEach((btn) => btn.remove());
+        //Remove header and editor style
+        const header = doc.querySelector("#header")?.remove();
+        const editorStyle = doc.querySelector("#editorStyle")?.remove();
+        // Remove the script that handles editing
+        doc.querySelector(".editorScript")?.remove();
+
+        // Turn document into a string
+        const htmlString = "<!DOCTYPE html>\n" + doc.outerHTML;
+
+        // Create downloadable file
+        const blob = new Blob([htmlString], { type: "text/html" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "portfolio.html";
+        a.click();
+
+        URL.revokeObjectURL(url);
+      }
     </script>
   </body>
 </html>

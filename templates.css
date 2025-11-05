@@ -1,9 +1,11 @@
-#allTemplates {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+#allTemplates, #locked-template {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   margin: 50px auto;
+  width: 100%;
 }
 .template {
   background: #f2f0f0;
@@ -13,6 +15,7 @@
   transition: all 0.5s ease;
   cursor: pointer;
   padding-bottom: 10px;
+  width: 250px;
 }
 .template:hover {
   transform: translateY(-6px);
@@ -37,7 +40,7 @@ a {
   transition: 0.25s ease;
 }
 #desc {
-  margin-left: 10px;
+margin: 10px;
 }
 .descTitle {
   margin: 10px 0 5px 0;
@@ -62,9 +65,9 @@ a {
 #locked-template .desc {
   display: none;
 }
-@media (max-width: 600px) {
-  #allTemplates {
-    grid-template-columns: 1fr;
+@media (max-width: 800px) {
+  .template{
+    width: 99%;
   }
   a.btn {
     display: block;

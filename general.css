@@ -28,13 +28,26 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 header nav a {
   text-decoration: none;
   color: #fafafa;
+  margin: 0 15px;
+  font-size: 1em;
+  font-weight: 600;
+}
+header nav a:hover {
+  color: #6366f1;
+}
+a.logo {
+  text-decoration: none;
+  color: #fafafa;
   font-size: 2em;
   font-weight: bold;
-  margin: 0 10px;
+  margin: 0 16px;
   margin-bottom: 1em;
 }
 h2 {

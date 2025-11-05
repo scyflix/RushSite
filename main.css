@@ -13,9 +13,11 @@ h2 {
 h3.icon {
   font-size: 40px;
   text-align: center;
+  margin-bottom: 20px;
 }
 h4 {
   color: #0a172b;
+  margin-bottom: 10px;
 }
 #features {
   font-weight: bold;
@@ -28,6 +30,7 @@ a.btn {
   text-decoration: none;
   color: #fafafa;
   border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 a.btn:hover {
   background-color: #248eff;
