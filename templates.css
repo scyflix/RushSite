@@ -40,10 +40,10 @@ a {
   transition: 0.25s ease;
 }
 #desc {
-margin: 10px;
+margin-left: 10px;
 }
 .descTitle {
-  margin: 10px 0 5px 0;
+  margin: 10px 0 5px 15px;
   font-size: 20px;
 }
 .descText {
