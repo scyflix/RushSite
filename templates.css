@@ -1,11 +1,18 @@
-#allTemplates, #locked-template {
+#allTemplates{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
   margin: 50px auto;
   width: 100%;
+  gap: 10px;
+}
+#locked-template  {
+   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px auto;
+  width: 100%;
+  gap: 10px;
 }
 .template {
   background: #f2f0f0;
@@ -40,7 +47,7 @@ a {
   transition: 0.25s ease;
 }
 #desc {
-margin-left: 10px;
+  margin-left: 10px;
 }
 .descTitle {
   margin: 10px 0 5px 15px;
@@ -66,7 +73,7 @@ margin-left: 10px;
   display: none;
 }
 @media (max-width: 800px) {
-  .template{
+  .template {
     width: 99%;
   }
   a.btn {
