@@ -17,6 +17,11 @@
         box-sizing: border-box;
         font-family: "Inter", sans-serif;
       }
+      html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
       body {
         background: var(--bg);
         color: var(--text);
@@ -84,28 +89,6 @@
       button:hover {
         opacity: 0.7;
       }
-      #action {
-        top: 20px;
-        right: 20px;
-        display: flex;
-        gap: 10px;
-        margin: 10px 0 0 10px;
-      }
-      .actionbtn {
-        margin-bottom: 20px;
-        top: 20px;
-        right: 20px;
-        color: #fff;
-        border-radius: 6px;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
-      #resetbtn {
-        background: #ff4d4d;
-      }
-      #downloadbtn {
-        background: #4caf50;
-      }
       .primary {
         background: linear-gradient(135deg, var(--accent1), var(--accent2));
         color: #fff;
@@ -165,7 +148,22 @@
       .project-item:hover {
         border-color: rgba(255, 255, 255, 0.3);
       }
-    </style>
+      /*FOOTER STYLING*/
+      footer {
+        text-align: center;
+        padding: 5px;
+        margin-top: auto;
+                font-size: 0.9rem;
+        background: #111827;
+        color: #b0b3b8;
+        max-width: 100%;
+        border-radius: 10px 0;
+      }
+      footer a {
+        color: #00bcd4;
+        text-decoration: none;
+      }
+      </style>
     <style id="editorStyle">
       h1 {
         margin: 0 10px;
@@ -192,6 +190,28 @@
       }
       header nav a:hover {
         color: #6366f1;
+      }
+      #action {
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+        margin: 10px 0 0 10px;
+      }
+      .actionbtn {
+        margin-bottom: 20px;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+      #resetbtn {
+        background: #ff4d4d;
+      }
+      #downloadbtn {
+        background: #4caf50;
       }
       a.logo {
         text-decoration: none;
@@ -225,7 +245,7 @@
         Export HTML
       </button>
     </div>
-
+<hr>
     <main>
       <section class="hero">
         <div class="bg-blur bl1"></div>
@@ -294,6 +314,10 @@
         </div>
       </section>
     </main>
+    <footer>
+      <p contenteditable>&copy; Your name | All rights reserved</p>
+      <p>Powered by <a href="index.htmk">RushSite⚡</a></p>
+    </footer>
     <script class="editorScript">
       function removeEdit() {
         const yes = confirm("Clear all saved edits?");
