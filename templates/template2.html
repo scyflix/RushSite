@@ -226,6 +226,17 @@
         }
       }
       /*FOOTER STYLING*/
+      footer [contenteditable="true"] {
+  cursor: text;
+  border-bottom: 1px dashed transparent;
+  transition: 0.2s;
+}
+
+footer [contenteditable="true"]:hover,
+footer [contenteditable="true"]:focus {
+  border-bottom: 1px dashed #94a3b8; /* soft slate line to hint it's editable */
+}
+
       footer {
         text-align: center;
         padding: 20px;
@@ -569,12 +580,17 @@
         </p>
       </section>
     </main>
-    <footer>
-      <p contenteditable data-field="footer-text">
-        &copy; Your name | All rights reserved
-      </p>
-      <p>Powered by <a href="../index.html">RushSite⚡</a></p>
-    </footer>
+   <footer>
+  <p contenteditable="true" data-field="footer-text" 
+     title="Click to edit footer text">
+    © Your Name — All Rights Reserved
+  </p>
+
+  <p class="powered">
+    Built with <a href="../index.html">RushSite⚡</a>
+  </p>
+</footer>
+
     <script>
       //make onclick function work with js
       const sidebar = document.getElementById("sidebar");

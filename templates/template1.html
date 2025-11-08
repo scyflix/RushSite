@@ -170,6 +170,17 @@
         color: #00bcd4;
         text-decoration: none;
       }
+      footer [contenteditable="true"] {
+  cursor: text;
+  border-bottom: 1px dashed transparent;
+  transition: 0.2s;
+}
+
+footer [contenteditable="true"]:hover,
+footer [contenteditable="true"]:focus {
+  border-bottom: 1px dashed #94a3b8; /* soft slate line to hint it's editable */
+}
+
     </style>
     <style id="editorStyle">
       h1 {
@@ -258,10 +269,10 @@
         <div class="bg-blur bl1"></div>
         <div class="bg-blur bl2"></div>
 
-        <h1 contenteditable data-field="hero-title">
+        <h1 contenteditable data-field="hero-title" title="Click to edit  text">
           Hi, I'm <span>Your Name</span>
         </h1>
-        <p contenteditable data-field="hero-text">
+        <p contenteditable data-field="hero-text" title="Click to edit  text">
           Front-end Developer & UI Enthusiast — building sleek digital
           experiences.
         </p>
@@ -321,10 +332,17 @@
         </div>
       </section>
     </main>
-    <footer>
-      <p contenteditable>&copy; Your name | All rights reserved</p>
-      <p>Powered by <a href="../index.html">RushSite⚡</a></p>
-    </footer>
+   <footer>
+  <p contenteditable="true" data-field="footer-text" 
+     title="Click to edit  text">
+    © Your Name — All Rights Reserved
+  </p>
+
+  <p class="powered">
+    Built with <a href="../index.html">RushSite⚡</a>
+  </p>
+</footer>
+
     <script class="editorScript">
       function removeEdit() {
         const yes = confirm("Clear all saved edits?");
