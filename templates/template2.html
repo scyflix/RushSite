@@ -35,7 +35,8 @@
         box-sizing: border-box;
       }
       /*HTML style*/
-      html, body {
+      html,
+      body {
         scroll-behavior: smooth;
         margin: 0;
         padding: 0;
@@ -312,7 +313,7 @@
       /* You are free to use this template but please give credit to Scybud and Abdulroqib Oladipo */
     </style>
     <!--EDITOR STYLE-->
-     <style id="editorStyle">
+    <style id="editorStyle">
       h1 {
         margin: 0 10px;
       }
@@ -337,7 +338,7 @@
       #header nav a:hover {
         color: #6366f1;
       }
-       button {
+      button {
         padding: 12px 22px;
         border: none;
         border-radius: 12px;
@@ -386,7 +387,7 @@
     </style>
   </head>
   <body>
-       <div id="header">
+    <div id="header">
       <a href="../index.html" class="logo"> RushSite⚡ </a>
       <nav>
         <a href="../index.html">Home</a>
@@ -400,8 +401,8 @@
       <button id="downloadbtn" class="actionbtn" onclick="exportHTML()">
         Export HTML
       </button>
-</div>
-<hr>
+    </div>
+    <hr />
     <!--SIDEBAR FOR SMALLER SCREENS-->
     <div id="sidebar">
       <!--Sidebar icon-->
@@ -484,7 +485,9 @@
           <div contenteditable data-field="skill3-text">JavaScript</div>
           <div contenteditable data-field="skill4-text">React</div>
           <div contenteditable data-field="skill5-text">Responsive Design</div>
-          <div contenteditable data-field="skill6-text">Words Document(Basic)</div>
+          <div contenteditable data-field="skill6-text">
+            Words Document(Basic)
+          </div>
         </div>
       </section>
       <!--PROJECTS SECTION-->
@@ -497,27 +500,39 @@
           <!--Add a short description of what each prject does in the <p> element under each project-->
           <div class="project">
             <h3 contenteditable data-field="project1-title">Project name</h3>
-            <p contenteditable data-field="project1-desc">Project description</p>
+            <p contenteditable data-field="project1-desc">
+              Project description
+            </p>
           </div>
           <div class="project">
             <h3 contenteditable data-field="project2-title">Project name</h3>
-            <p contenteditable data-field="project2-desc">Project description</p>
+            <p contenteditable data-field="project2-desc">
+              Project description
+            </p>
           </div>
           <div class="project">
             <h3 contenteditable data-field="project3-title">Project name</h3>
-            <p contenteditable data-field="project3-desc">Project description</p>
+            <p contenteditable data-field="project3-desc">
+              Project description
+            </p>
           </div>
           <div class="project">
             <h3 contenteditable data-field="project4-title">Project name</h3>
-            <p contenteditable data-field="project4-desc">Project description</p>
+            <p contenteditable data-field="project4-desc">
+              Project description
+            </p>
           </div>
           <div class="project">
             <h3 contenteditable="" data-field="project5-title">Project name</h3>
-            <p contenteditable data-field="project5-desc">Project description</p>
+            <p contenteditable data-field="project5-desc">
+              Project description
+            </p>
           </div>
           <div class="project">
             <h3 contenteditable data-field="project6-title">Project name</h3>
-            <p contenteditable data-field="project6-desc">Project description</p>
+            <p contenteditable data-field="project6-desc">
+              Project description
+            </p>
           </div>
         </div>
       </section>
@@ -529,22 +544,35 @@
         </p>
 
         <p>
-          <span>Email:</span> <span contenteditable data-field="contact-email">youremail@gmail.com</span>
+          <span>Email:</span>
+          <span contenteditable data-field="contact-email"
+            >youremail@gmail.com</span
+          >
         </p>
         <p>
-          <span>GitHub:</span> <span contenteditable data-field="contact-GitHub">Your GitHub link</span>
+          <span>GitHub:</span>
+          <span contenteditable data-field="contact-GitHub"
+            >Your GitHub link</span
+          >
         </p>
         <p>
           <span>Twitter/X:</span>
-          <span contenteditable data-field="contact-Twitter">Your Twitter/X link</span>
+          <span contenteditable data-field="contact-Twitter"
+            >Your Twitter/X link</span
+          >
         </p>
         <p>
-          <span>LinkedIn:</span> <span contenteditable data-field="contact-LinkedIn">Your LinkedIn link</span>
+          <span>LinkedIn:</span>
+          <span contenteditable data-field="contact-LinkedIn"
+            >Your LinkedIn link</span
+          >
         </p>
       </section>
     </main>
     <footer>
-      <p contenteditable data-field="footer-text">&copy; Your name | All rights reserved</p>
+      <p contenteditable data-field="footer-text">
+        &copy; Your name | All rights reserved
+      </p>
       <p>Powered by <a href="index.htmk">RushSite⚡</a></p>
     </footer>
     <script>
@@ -566,9 +594,8 @@
         link.addEventListener("click", () => {
           about.style.display = "block";
           skills.style.display = "none";
-                    projects.style.display = "none";
+          projects.style.display = "none";
           contact.style.display = "none";
-
         });
       });
 
@@ -578,7 +605,7 @@
         link.addEventListener("click", () => {
           skills.style.display = "block";
           about.style.display = "none";
-             projects.style.display = "none";
+          projects.style.display = "none";
           contact.style.display = "none";
         });
       });
@@ -587,11 +614,10 @@
       const projectsLink = document.querySelectorAll(".projectsLink");
       projectsLink.forEach((link) => {
         link.addEventListener("click", () => {
-              projects.style.display = "block";
-              about.style.display = "none";
-           skills.style.display = "none";
-                     contact.style.display = "none";
-
+          projects.style.display = "block";
+          about.style.display = "none";
+          skills.style.display = "none";
+          contact.style.display = "none";
         });
       });
 
@@ -600,13 +626,13 @@
       contactLink.forEach((link) => {
         link.addEventListener("click", () => {
           contact.style.display = "block";
-             projects.style.display = "none";
-              about.style.display = "none";
-           skills.style.display = "none";
+          projects.style.display = "none";
+          about.style.display = "none";
+          skills.style.display = "none";
         });
       });
 
-       //download html file
+      //download html file
       function exportHTML() {
         const downloadBtn = document.getElementById("downloadbtn");
         setTimeout(() => {
@@ -650,7 +676,7 @@
         URL.revokeObjectURL(url);
       }
     </script>
-     <script class="editorScript">
+    <script class="editorScript">
       function removeEdit() {
         const yes = confirm("Clear all saved edits?");
         if (!yes) return;
