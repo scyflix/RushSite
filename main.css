@@ -49,6 +49,7 @@ a.btn {
   border-radius: 12px;
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(79,70,229,0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-cokor 0.4s ease;
 }
 
 a.btn:hover {
