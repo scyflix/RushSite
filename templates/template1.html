@@ -126,7 +126,7 @@
       }
       #contact {
         max-width: 600px;
-        margin: 60px auto 0;
+        margin: 60px auto 10px;
         padding: 30px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
@@ -156,18 +156,19 @@
       }
       .project-item {
         width: 350px;
-        margin: 0 auto;
+        margin: 0 auto 10px;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 20px;
+        padding: 10px;
         border-radius: 10px;
+        transition: transform 0.5s ease;
       }
       .project-item:hover {
         border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-3px);    
       }
       /*FOOTER STYLING*/
       footer {
         text-align: center;
-        padding: 5px;
         margin-top: auto;
         font-size: 0.9rem;
         background: #111827;

@@ -136,6 +136,9 @@ form button:hover {
   background-color: #4338ca;
   transform: translateY(-3px);
 }
+label {
+  font-weight: 600;
+}
 footer {
   text-align: center;
   background-color: #07101c;
