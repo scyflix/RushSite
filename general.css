@@ -8,7 +8,7 @@ body {
   margin: 0;
   background: linear-gradient(145deg, #ecf3ff, #f4f8ff);
   color: #1e293b;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
   line-height: 1.6;
 }
 @keyframes fadeIn {
