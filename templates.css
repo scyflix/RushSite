@@ -86,7 +86,7 @@ a {
   font-size: 14px;
   color: #475569;
 }
-.lock, .free {
+.lock {
   position: absolute;
   top:5px;
   right: 12px;
@@ -99,6 +99,14 @@ a {
 }
 .free {
   background: #248eff;
+    position: absolute;
+  top:5px;
+  right: 12px;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 600;
 }
 #locked-template .desc {
   display: none;
