@@ -26,7 +26,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Add your name to the title-->
-    <title>Your Name | Portfolio</title>
+    <title>Portfolio</title>
     <style>
       /* Portfolio Template by Scybud
   Author: Abdulroqib Oladipo
@@ -722,10 +722,6 @@
     </footer>
 
     <script>
-      //Lightmode
-      function toggleLightMode() {
-        document.body.classList.toggle("light-mode");
-      }
 
       //make onclick function work with js
       const sidebar = document.getElementById("sidebar");
@@ -782,72 +778,13 @@
           skills.style.display = "none";
         });
       });
-
-      //download html file
-      function exportHTML() {
-        const downloadBtn = document.getElementById("downloadbtn");
-        setTimeout(() => {
-          downloadBtn.innerText = "Exporting...";
-        }, 1000);
-        setTimeout(() => {
-          downloadBtn.innerText = "Exported";
-        }, 2000);
-        setTimeout(() => {
-          downloadBtn.innerText = "Export HTML";
-        }, 3000);
-
-        // Clone the whole HTML document
-        const doc = document.documentElement.cloneNode(true);
-
-        // Remove contenteditable + data-field attributes
-        doc.querySelectorAll("[contenteditable]").forEach((element) => {
-          element.removeAttribute("contenteditable");
-          element.removeAttribute("data-field");
-        });
-        // Remove reset & export buttons
-        doc.querySelectorAll(".actionbtn").forEach((btn) => btn.remove());
-        //Remove header and editor style
-        const header = doc.querySelector("#header")?.remove();
-        const editorStyle = doc.querySelector("#editorStyle")?.remove();
-        // Remove the script that handles editing
-        doc.querySelector(".editorScript")?.remove();
-
-        // Turn document into a string
-        const htmlString = "<!DOCTYPE html>\n" + doc.outerHTML;
-
-        // Create downloadable file
-        const blob = new Blob([htmlString], { type: "text/html" });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "portfolio.html";
-        a.click();
-
-        URL.revokeObjectURL(url);
-      }
     </script>
-    <script class="editorScript">
-      function removeEdit() {
-        const yes = confirm("Clear all saved edits?");
-        if (!yes) return;
-
-        localStorage.clear();
-        location.reload();
-      }
-      document
-        .querySelectorAll("[contenteditable][data-field]")
-        .forEach((element) => {
-          // Load saved value
-          const saved = localStorage.getItem(element.dataset.field);
-          if (saved) element.innerHTML = saved;
-
-          // Save when typing
-          element.addEventListener("input", () =>
-            localStorage.setItem(element.dataset.field, element.innerHTML)
-          );
-        });
+    <script src="export.js">
+      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
     </script>
+        <script src="editor.js">
+          //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
+        </script>
   </body>
 </html>
 <!-- You are free to use this template but please give credit to Scybud and Abdulroqib Oladipo -->
