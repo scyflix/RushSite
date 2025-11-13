@@ -8,15 +8,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <!-- Google tag (gtag.js) -->
-<script async class="editorScript" src="https://www.googletagmanager.com/gtag/js?id=G-FMKP1N6MX3"></script>
-<script class="editorScript">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      class="editorScript"
+      src="https://www.googletagmanager.com/gtag/js?id=G-FMKP1N6MX3"
+    ></script>
+    <script class="editorScript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-FMKP1N6MX3');
-</script>
+      gtag("config", "G-FMKP1N6MX3");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Add your name to the title-->
@@ -37,13 +43,68 @@
   Modify these to personalize your color theme.
 */
 
-      /*GENERAL STYLING*/
+      /* GENERAL STYLING */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      /*HTML style*/
+
+      /* COLOR VARIABLES */
+      :root {
+        --bg: #0e1117;
+        --text: #f5f5f5;
+        --header-bg: #111827;
+        --h1-color: #00bcd4;
+        --h2-color: #89cff0;
+        --nav-link: #00cbe6;
+        --nav-link-hover: #66e3f3;
+        --h3-color: #6eacda;
+        --h3-hover: #09e2ff;
+        --hero-bg: linear-gradient(145deg, #141a24, #0e1117);
+        --project-btn-bg: #007e8e;
+        --project-btn-text: #00102d;
+        --cards-bg: #0b1a2a;
+        --skills-bg: white;
+        --skills-text: black;
+        --project-bg: #00102d;
+        --project-shadow: #00274b;
+        --project-hover-shadow: #025c68;
+        --footer-bg: #111827;
+        --footer-text: #b0b3b8;
+        --footer-link: #00bcd4;
+        --menu-bar: beige;
+                --cancel-bar: #e5e7eb;
+      }
+
+      /* LIGHT MODE VARIABLES */
+      body.light-mode {
+        --bg: #f3f4f6;
+        --text: #111827;
+        --header-bg: #ffffff;
+        --h1-color: #007e8e;
+        --h2-color: #005b7f;
+        --nav-link: #007e8e;
+        --nav-link-hover: #00a0af;
+        --h3-color: #007bbf;
+        --h3-hover: #00cbe6;
+        --hero-bg: linear-gradient(145deg, #ffffff, #e5e7eb);
+        --project-btn-bg: #007e8e;
+        --project-btn-text: #ffffff;
+        --cards-bg: #ffffff;
+        --skills-bg: #e5e7eb;
+        --skills-text: #111827;
+        --project-bg: #ffffff;
+        --project-shadow: rgba(0, 0, 0, 0.1);
+        --project-hover-shadow: rgba(0, 0, 0, 0.3);
+        --footer-bg: #e5e7eb;
+        --footer-text: #374151;
+        --footer-link: #007bbf;
+        --menu-bar: #374151;
+        --cancel-bar: #e5e7eb;
+      }
+
+      /* HTML STYLE */
       html,
       body {
         scroll-behavior: smooth;
@@ -53,15 +114,17 @@
         flex-direction: column;
         height: 100%;
       }
-      /*BODY*/
+
+      /* BODY */
       body {
         font-family: "Poppins", sans-serif;
-        background-color: #0e1117;
-        color: #f5f5f5;
+        background-color: var(--bg);
+        color: var(--text);
         line-height: 1.6;
         max-width: 100vw;
       }
-      /*HEADER*/
+
+      /* HEADER */
       header {
         border-radius: 20px;
         min-width: 95vw;
@@ -71,7 +134,7 @@
         font-weight: 700;
         display: flex;
         align-items: center;
-        background: #111827;
+        background: var(--header-bg);
         min-height: 80px;
         height: auto;
         padding: 0 10px;
@@ -81,7 +144,8 @@
         z-index: 10;
         margin-top: 10px;
       }
-      /*MAIN*/
+
+      /* MAIN */
       main {
         margin: 10px auto;
         display: flex;
@@ -90,41 +154,49 @@
         align-items: center;
         flex: 1;
       }
-      /*HEADER H1 ELEMENT STYLE*/
+
+      /* HEADER H1 ELEMENT STYLE */
       header h1 {
-        color: #00bcd4;
+        color: var(--h1-color);
       }
-      /*H2 ELEMENT STYLE*/
+
+      /* H2 ELEMENT STYLE */
       h2 {
         text-align: center;
-        color: #89cff0;
+        color: var(--h2-color);
       }
-      /*HEADER NAVIGATION STYLE*/
+
+      /* HEADER NAVIGATION STYLE */
       nav {
         display: flex;
         justify-content: space-around;
       }
-      /*HEADER NAVIGATION LINKS STYLE*/
+
+      /* HEADER NAVIGATION LINKS STYLE */
       nav a {
         font-size: 0.95rem;
         margin-left: 20px;
-        color: #00cbe6;
+        color: var(--nav-link);
         text-decoration: none;
       }
-      /*HEADER NAVIGATION LINKS STYLE WHEN HOVERED*/
+
+      /* HEADER NAVIGATION LINKS STYLE WHEN HOVERED */
       nav a:hover {
-        color: #66e3f3;
+        color: var(--nav-link-hover);
       }
-      /*ALL NAVIGATION LINKS*/
+
+      /* ALL NAVIGATION LINKS */
       h3 {
         text-decoration: none;
-        color: #6eacda;
+        color: var(--h3-color);
       }
-      /*ALL NAVIGATION LINKS STYLE WHEN HOVERED*/
+
+      /* ALL NAVIGATION LINKS STYLE WHEN HOVERED */
       h3:hover {
-        color: #09e2ff;
+        color: var(--h3-hover);
       }
-      /*HERO SECTION STYLE*/
+
+      /* HERO SECTION STYLE */
       #hero {
         display: flex;
         justify-content: center;
@@ -132,63 +204,70 @@
         flex-direction: column;
         gap: 10px;
         font-size: 30px;
-        background: linear-gradient(145deg, #141a24, #0e1117);
+        background: var(--hero-bg);
         text-align: center;
         padding: 20px;
         margin: 5px 0;
         border-radius: 10px;
         min-height: 300px;
       }
-      /*NAVIGATION LINK TO PROJECT SECTION STYLE IN HERO*/
+
+      /* NAVIGATION LINK TO PROJECT SECTION STYLE IN HERO */
       #projectbtn {
-        background-color: #007e8e;
+        background-color: var(--project-btn-bg);
         border-radius: 50px;
         padding: 5px;
         margin: 10px;
-        color: #00102d;
+        color: var(--project-btn-text);
         text-decoration: none;
         transition: all 0.3s ease-in;
       }
-      /*NAVIGATION LINKS TO PROJECT SECTION STYLE WHEN HOVERED IN HERO */
+
+      /* NAVIGATION LINKS TO PROJECT SECTION STYLE WHEN HOVERED IN HERO */
       #projectbtn:hover {
         transform: scale(1.05);
         box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
         text-decoration: none;
       }
-      /*ALL SECTION WITH class="card" STYLE*/
+
+      /* ALL SECTION WITH class="card" STYLE */
       .cards {
-        background-color: #0b1a2a;
+        background-color: var(--cards-bg);
         width: 90vw;
         padding: 10px;
         border-radius: 10px;
         display: none;
       }
-      /*LIST OF ALL SKILLS CONTAINER STYLE*/
+
+      /* LIST OF ALL SKILLS CONTAINER STYLE */
       #skills-list {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
       }
-      /*LIST OF ALL SKILLS STYLE*/
+
+      /* LIST OF ALL SKILLS STYLE */
       #skills-list div {
         text-align: center;
-        background-color: white;
-        color: black;
+        background-color: var(--skills-bg);
+        color: var(--skills-text);
         border-radius: 10px;
         min-width: fit-content;
         width: 80px;
       }
-      /*LIST OF ALL SKILLS STYLE ON HOVER*/
+
+      /* LIST OF ALL SKILLS STYLE ON HOVER */
       #skills-list div:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;
       }
 
-      /*ALL SECTION STYLE*/
+      /* ALL SECTION STYLE */
       section {
         margin-top: 10px;
       }
-      /*CONTAINER OF ALL PROJECT*/
+
+      /* CONTAINER OF ALL PROJECT */
       #projects-container {
         display: flex;
         flex-wrap: wrap;
@@ -196,119 +275,134 @@
         gap: 20px;
         margin-top: 20px;
       }
-      /*LINKS IN CONTAINER OF ALL PROJECTS*/
+
+      /* LINKS IN CONTAINER OF ALL PROJECTS */
       #projects-container a {
         font-weight: 900;
         font-size: large;
       }
-      /*INDIVIDUAL PROJECT STYLE*/
+
+      /* INDIVIDUAL PROJECT STYLE */
       .project {
         width: 280px;
-        background-color: #00102d;
+        background-color: var(--project-bg);
         border-radius: 12px;
         padding: 15px;
         transition: all 0.3s ease-in-out;
         text-align: left;
-       box-shadow: 0 0 15px #00274b;
-
+        box-shadow: 0 0 15px var(--project-shadow);
       }
-      /*INDIVIDUAL PROJECT STYLE ON HOVER*/
+
+      /* INDIVIDUAL PROJECT STYLE ON HOVER */
       .project:hover {
         transform: translateY(-5px);
-        box-shadow: 0 0 15px #025c68;
+        box-shadow: 0 0 15px var(--project-hover-shadow);
       }
-      /*LINKS IN CONTACT CONTAINER*/
+
+      /* LINKS IN CONTACT CONTAINER */
       #contact p span:nth-child(2) {
-        color: #66e3f3;
+        color: var(--nav-link-hover);
       }
-      /*CONTACT SPAN ELEMENT*/
+
+      /* CONTACT SPAN ELEMENT */
       span {
         font-weight: 600;
       }
-      /*INDIVIDIAL PROJECT STYLE ON SMALLER SCREEN FOR CONSISTENT DESIGN*/
+
+      /* INDIVIDUAL PROJECT STYLE ON SMALLER SCREEN FOR CONSISTENT DESIGN */
       @media (max-width: 600px) {
         .project {
           width: 95%;
-          background-color: #00102d;
+          background-color: var(--project-bg);
           border-radius: 10px;
           padding: 5px 10px;
           transition: all 0.5s ease-in;
         }
       }
-      /*FOOTER STYLING*/
-      footer [contenteditable="true"] {
-  cursor: text;
-  border-bottom: 1px dashed transparent;
-  transition: 0.2s;
-}
 
-footer [contenteditable="true"]:hover,
-footer [contenteditable="true"]:focus {
-  border-bottom: 1px dashed #94a3b8; /* soft slate line to hint it's editable */
-}
+      /* FOOTER STYLING */
+      footer [contenteditable="true"] {
+        cursor: text;
+        border-bottom: 1px dashed transparent;
+        transition: 0.2s;
+      }
+
+      footer [contenteditable="true"]:hover,
+      footer [contenteditable="true"]:focus {
+        border-bottom: 1px dashed #94a3b8; /* soft slate line to hint it's editable */
+      }
 
       footer {
         text-align: center;
         padding: 20px;
         font-size: 0.9rem;
-        background: #111827;
-        color: #b0b3b8;
+        background: var(--footer-bg);
+        color: var(--footer-text);
         max-width: 100%;
         margin-top: auto;
       }
+
       footer a {
-        color: #00bcd4;
+        color: var(--footer-link);
         text-decoration: none;
       }
-      /*Make the sidebar invisible by default*/
+
+      /* Make the sidebar invisible by default */
       #sidebar {
         display: none;
       }
-      /*RESPONSIVE DESIGN FOR SMALLER SCREEN WIDTH*/
+
+      /* RESPONSIVE DESIGN FOR SMALLER SCREEN WIDTH */
       @media (max-width: 800px) {
-        /* make the name and menu icon stay beside each other*/
+        /* make the name and menu icon stay beside each other */
         header {
           display: flex;
           justify-content: flex-start;
           gap: 10px;
           margin: 0;
         }
-        /*Make the normal navigation links invisible on smaller screens*/
+
+        /* Make the normal navigation links invisible on smaller screens */
         #normal-navLinks {
           display: none;
         }
-        /*STYLE NAV LINKS IN SIDEBAR*/
+
+        /* STYLE NAV LINKS IN SIDEBAR */
         #sidebar nav {
           display: flex;
           flex-direction: column;
           gap: 30px;
           margin: 30px 0 0 30px;
         }
-        /*STYLE SIDEBAR*/
+
+        /* STYLE SIDEBAR */
         #sidebar {
-          backdrop-filter: blur(50px) brightness(40%);
+          backdrop-filter: blur(90px) brightness(20%);
           width: 50vw;
-          height: 100vw;
+          height: 100vh;
           top: 0;
           left: 0;
           position: fixed;
           z-index: 1000;
           display: none;
         }
-        /*ENSURE SIDEBAR SHOWS ON MENU ICON CLICK*/
+
+        /* ENSURE SIDEBAR SHOWS ON MENU ICON CLICK */
         #sidebar.show {
           display: block;
         }
-        /*STYLE SPAN ELEMENT TO LOOK LIKE MENU ICON*/
+
+        /* STYLE SPAN ELEMENT TO LOOK LIKE MENU ICON */
         #menuIcon span,
         #cancelIcon span {
-          background-color: beige;
+          background-color: var(--menu-bar);
           width: 30px;
           height: 5px;
           margin: 0 3px 5px 5px;
           border-radius: 20px;
         }
-        /*STYLE MENU ICON ITSELF*/
+
+        /* STYLE MENU ICON ITSELF */
         #menuIcon,
         #cancelIcon {
           display: flex;
@@ -316,21 +410,40 @@ footer [contenteditable="true"]:focus {
           cursor: pointer;
           margin-top: 10px;
         }
-        /*STYLE CANCEL ICON INSIDE SIDEBAR*/
+         #cancelIcon span {
+
+           background-color: var(--cancel-bar);
+         }
+
+        /* STYLE CANCEL ICON INSIDE SIDEBAR */
         #cancelIcon {
           margin: 20px;
         }
-        /*MAKE SPAN FOR CANCEL ICON LOOK LIKE AN X SHAPE*/
+
+        /* MAKE SPAN FOR CANCEL ICON LOOK LIKE AN X SHAPE */
         #middlebar {
           display: none;
         }
+
         #topbar {
           transform: rotate(45deg) translate(7px);
         }
+
         #bottombar {
           transform: rotate(-45deg) translate(7px);
         }
       }
+      /* Smooth transition for light/dark mode */
+      body,
+      header,
+      footer,
+      .project,
+      .cards,
+      #hero,
+      #skills-list div {
+        transition: all 0.9s ease;
+      }
+
       /* You are free to use this template but please give credit to Scybud and Abdulroqib Oladipo */
     </style>
     <!--EDITOR STYLE-->
@@ -338,7 +451,7 @@ footer [contenteditable="true"]:focus {
       h1 {
         margin: 0 10px;
       }
-      #header::after  {
+      #header::after {
         content: "(click any to start editor)";
       }
       #header {
@@ -424,6 +537,9 @@ footer [contenteditable="true"]:focus {
       </button>
       <button id="downloadbtn" class="actionbtn" onclick="exportHTML()">
         Export HTML
+      </button>
+      <button onclick="toggleLightMode()" id="lightmode" class="actionbtn">
+        🌞 / 🌙
       </button>
     </div>
     <hr />
@@ -593,18 +709,24 @@ footer [contenteditable="true"]:focus {
         </p>
       </section>
     </main>
-   <footer>
-  <p contenteditable="true" data-field="footer-text" 
-     title="Click to edit footer text">
-    © Your Name — All Rights Reserved
-  </p>
+    <footer>
+      <p
+        contenteditable="true"
+        data-field="footer-text"
+        title="Click to edit footer text"
+      >
+        © Your Name — All Rights Reserved
+      </p>
 
-  <p class="powered">
-    Built with <a href="../index.html">RushSite⚡</a>
-  </p>
-</footer>
+      <p class="powered">Built with <a href="../index.html">RushSite⚡</a></p>
+    </footer>
 
     <script>
+      //Lightmode
+      function toggleLightMode() {
+        document.body.classList.toggle("light-mode");
+      }
+
       //make onclick function work with js
       const sidebar = document.getElementById("sidebar");
 
