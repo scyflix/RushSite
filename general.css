@@ -78,3 +78,31 @@ footer p {
     flex-direction: column;
   }
 }
+
+#scybudApps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+#scybudApps a {
+  text-decoration: none;
+}
+#scybudApps .container {
+  display: flex;
+  flex-direction: column; /* FIXED HERE */
+  align-items: center;
+  justify-content: center;
+}
+#scybudApps a span {
+  margin-top: 5px;
+  color: #f1f1f1;
+  font-size: 12px;
+}
+#scybudApps .container img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
