@@ -47,18 +47,29 @@ header nav a {
 header nav a:hover {
   color: #6366f1;
 }
-a.logo {
+.logoLink {
   text-decoration: none;
-  color: #fafafa;
-  font-size: 2em;
-  font-weight: bold;
-  margin: 0 16px;
-  margin-bottom: 1em;
-  transition: all 0.5s ease;
+  margin: 15px;
 }
-a.logo:hover {
-  color: #cdcdcd;
-  transform: scale(0.99);
+a .brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
+}
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #5b21b6, #4dd0e1);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #fafafa;
+}
+.muted {
+  color: #6d82a0;
+  font-size: 14px;
 }
 h2 {
   text-align: center;
