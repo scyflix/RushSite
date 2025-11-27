@@ -4,12 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Inter", sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   background: linear-gradient(145deg, #ecf3ff, #f4f8ff);
   color: #1e293b;
-  animation: fadeIn 1s ease-in-out;
   line-height: 1.6;
+  font-size: 16px;
+  animation: fadeIn 1s ease-in-out;
 }
 @keyframes fadeIn {
   from {
@@ -18,8 +19,7 @@ body {
   }
   to {
     opacity: 1;
-        margin-top: 0;
-
+    margin-top: 0;
   }
 }
 h1 {
@@ -40,8 +40,9 @@ header nav a {
   text-decoration: none;
   color: #fafafa;
   margin: 0 15px;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 600;
+  transition: all 0.6s ease;
 }
 header nav a:hover {
   color: #6366f1;
@@ -53,6 +54,11 @@ a.logo {
   font-weight: bold;
   margin: 0 16px;
   margin-bottom: 1em;
+  transition: all 0.5s ease;
+}
+a.logo:hover {
+  color: #cdcdcd;
+  transform: scale(0.99);
 }
 h2 {
   text-align: center;
@@ -73,8 +79,8 @@ footer h4,
 footer p {
   color: #fafafa;
 }
-@media (max-width:600px) {
-  header{
+@media (max-width: 600px) {
+  header {
     flex-direction: column;
   }
 }
@@ -93,6 +99,10 @@ footer p {
   flex-direction: column; /* FIXED HERE */
   align-items: center;
   justify-content: center;
+  transition: all 0.5s ease;
+}
+#scybudApps .container:hover {
+  transform: scale(1.1);
 }
 #scybudApps a span {
   margin-top: 5px;
