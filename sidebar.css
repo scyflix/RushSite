@@ -5,7 +5,7 @@
       --sidebarbg: #0a172b;
       --fullsize: 100%;
 }
-  .menuIcon {
+  .menuIcon, .sidebar {
       display: none;
   }
 @media (max-width: 600px) {
@@ -46,6 +46,7 @@
   background: var(--sidebarbg);
         width: 70%;
         height: var(--fullsize);
+        display: block;
       }
       .sidebar nav {
         display: var(--flexbox);
