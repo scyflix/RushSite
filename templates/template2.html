@@ -74,7 +74,7 @@
         --footer-text: #b0b3b8;
         --footer-link: #00bcd4;
         --menu-bar: beige;
-                --cancel-bar: #e5e7eb;
+        --cancel-bar: #e5e7eb;
       }
 
       /* LIGHT MODE VARIABLES */
@@ -410,10 +410,9 @@
           cursor: pointer;
           margin-top: 10px;
         }
-         #cancelIcon span {
-
-           background-color: var(--cancel-bar);
-         }
+        #cancelIcon span {
+          background-color: var(--cancel-bar);
+        }
 
         /* STYLE CANCEL ICON INSIDE SIDEBAR */
         #cancelIcon {
@@ -508,7 +507,7 @@
       #downloadbtn {
         background: #4caf50;
       }
-        #lightmode {
+      #lightmode {
         color: #0a0a0a;
       }
       a.logo {
@@ -524,11 +523,11 @@
           flex-direction: column;
         }
       }
-          .logoLink {
-  text-decoration: none;
-  margin: 15px;
-}
-a .brand {
+      .logoLink {
+        text-decoration: none;
+        margin: 15px;
+      }
+      a .brand {
         display: flex;
         gap: 12px;
         align-items: center;
@@ -552,7 +551,8 @@ a .brand {
   </head>
   <body>
     <div id="header">
- <a href="../index.html" class="logoLink"><div class="brand">
+      <a href="../index.html" class="logoLink"
+        ><div class="brand">
           <div class="logo">R</div>
           <div>
             <div class="muted" style="font-weight: 700">RushSite⚡</div>
@@ -560,11 +560,12 @@ a .brand {
               Build, customize, export — fast
             </div>
           </div>
-        </div> </a>      <nav>
+        </div>
+      </a>
+      <nav>
         <a href="../index.html">Home</a>
         <a href="../templates.html">Templates</a>
-                <a href="pricing.html">Pricing</a>
-
+        <a href="pricing.html">Pricing</a>
       </nav>
     </div>
     <div id="action">
@@ -758,7 +759,6 @@ a .brand {
     </footer>
 
     <script>
-
       //make onclick function work with js
       const sidebar = document.getElementById("sidebar");
 
@@ -818,9 +818,12 @@ a .brand {
     <script src="export.js">
       //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
     </script>
-        <script src="editor.js">
-          //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
-        </script>
+    <script src="editor.js">
+      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
+    </script>
+    <script src="../sidebar.js">
+      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
+    </script>
   </body>
 </html>
 <!-- You are free to use this template but please give credit to Scybud and Abdulroqib Oladipo -->

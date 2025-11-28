@@ -2,14 +2,19 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FMKP1N6MX3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-FMKP1N6MX3"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-FMKP1N6MX3');
-</script>
+      gtag("config", "G-FMKP1N6MX3");
+    </script>
     <meta charset="UTF-8" />
     <!-- Primary Meta Tags -->
     <title>RushSite — View All Templates</title>
@@ -81,34 +86,53 @@
     />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <link rel="stylesheet" href="general.css" />
-    <link rel="stylesheet" href="templates.css" />
-  </head>
+    <link rel="stylesheet" href="templates.css" /></head
+  ><link rel="stylesheet" href="sidebar.css" />
   <body>
     <header>
-        <a href="index.html" class="logoLink"><div class="brand">
+      <div class="menuIcon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="index.html" class="logoLink"
+        ><div class="brand">
           <div class="logo">R</div>
           <div>
             <div class="muted" style="font-weight: 700">RushSite</div>
           </div>
-        </div> </a>
+        </div>
+      </a>
       <nav>
         <a href="index.html">Home</a>
         <a href="templates.html">Templates</a>
-                <a href="pricing.html">Pricing</a>
-
+        <a href="pricing.html">Pricing</a>
       </nav>
     </header>
+    <!--SIDEBAR-->
+
+    <div id="sidebarContainer">
+      <div class="sidebar">
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="templates.html">Templates</a>
+          <a href="pricing.html">Pricing</a>
+        </nav>
+      </div>
+    </div>
     <div class="template-intro">
-  <h1>Build Your Portfolio in Minutes</h1>
-  <p>Pick a template and start editing instantly — no signup, no coding.</p>
-  <a href="index.html#waitlistform" class="templates-btn">Join Early Access 🚀</a>
-</div>
-    
+      <h1>Build Your Portfolio in Minutes</h1>
+      <p>Pick a template and start editing instantly — no signup, no coding.</p>
+      <a href="index.html#waitlistform" class="templates-btn"
+        >Join Early Access 🚀</a
+      >
+    </div>
+
     <main>
       <h2>Available Templates</h2>
       <section id="allTemplates">
         <div class="template">
-                      <h2 class="free">Free</h2>
+          <h2 class="free">Free</h2>
           <a href="templates/template1.html">
             <img src="assets/template 1 image.svg" alt="Template 1 Thumbnail" />
             <div class="desc">
@@ -125,7 +149,7 @@
           </a>
         </div>
         <div class="template">
-         <h2 class="free">Free</h2>
+          <h2 class="free">Free</h2>
           <a href="templates/template2.html">
             <img src="assets/template 2 image.svg" alt="Template 2 Thumbnail" />
             <div class="desc">
@@ -182,52 +206,50 @@
       </section>
     </main>
     <footer>
- <div id="FromScybud">
-
+      <div id="FromScybud">
         <h5>Also From Scybud</h5>
         <div id="scybudApps">
-       
-        <a href="https://scyflix.github.io/RushSite/" target="_blank">
-          <div class="container">
-          <img
-            src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
-            alt="RushSite Logo"
-            />
-            <span>RushSite</span>
-          </div>
-        </a>
-        <a href="https://trytasty.de/" target="_blank">
-          <div class="container">
-
-            <img
-            src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1756143298/export202508172154182910_eqqsko.avif"
-            alt="TryTasty Logo"
-            />
-            <span>TryTasty</span>
-          </div>
-        </a>
-        <a href="https://scyflix.github.io/Playbud/" target="_blank">
-         <div class="container">
-
-           <img
-             src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
-             alt="Playbud Logo"
-           />
-           <span>Playbud</span>
-         </div>
-        </a>
-        <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
-         <div class="container">
-           <img
-             src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
-             alt="Scybud Logo"
-             />
-             <span>Scybud</span>
+          <a href="https://scyflix.github.io/RushSite/" target="_blank">
+            <div class="container">
+              <img
+                src="https://scyflix.github.io/RushSite/assets/RushSite%20logo.svg"
+                alt="RushSite Logo"
+              />
+              <span>RushSite</span>
+            </div>
+          </a>
+          <a href="https://trytasty.de/" target="_blank">
+            <div class="container">
+              <img
+                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1756143298/export202508172154182910_eqqsko.avif"
+                alt="TryTasty Logo"
+              />
+              <span>TryTasty</span>
+            </div>
+          </a>
+          <a href="https://scyflix.github.io/Playbud/" target="_blank">
+            <div class="container">
+              <img
+                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1757763602/ChatGPT_Image_Sep_13_2025_01_23_30_PM_gqilng.png"
+                alt="Playbud Logo"
+              />
+              <span>Playbud</span>
+            </div>
+          </a>
+          <a href="https://scyflix.github.io/Scybud-Labs/" target="_blank">
+            <div class="container">
+              <img
+                src="https://res.cloudinary.com/dc1bmavl5/image/upload/v1750181306/My%20Brand/file_00000000610c6243beec099c93f3f4eb_wgtezq.png"
+                alt="Scybud Logo"
+              />
+              <span>Scybud</span>
             </div>
           </a>
         </div>
       </div>
-      <hr />      <p>&copy; RushSite | All rights Reserved</p>
+      <hr />
+      <p>&copy; RushSite | All rights Reserved</p>
     </footer>
+    <script src="sidebar.js"></script>
   </body>
 </html>

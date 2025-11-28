@@ -90,12 +90,6 @@ footer h4,
 footer p {
   color: #fafafa;
 }
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-  }
-}
-
 #scybudApps {
   display: flex;
   justify-content: center;
