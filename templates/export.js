@@ -36,7 +36,7 @@ function exportHTML() {
 
   const a = document.createElement("a");
   a.href = url;
-  a.download = "portfolio.html";
+  a.download = "index.html";
   a.click();
 
   URL.revokeObjectURL(url);
