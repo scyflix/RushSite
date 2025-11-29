@@ -1,9 +1,9 @@
 :root {
   --iconbg: #6265fd;
   --gap: 4px;
-  --flexbox: flex;
   --sidebarbg: #0a172b;
-  --fullsize: 100%;
+  --borderColor: #314564;
+  --hoverbg: rgba(0, 0, 0, 0.4);
 }
 .menuIcon,
 .sidebar {
@@ -21,22 +21,42 @@
     position: absolute;
     right: 10px;
     cursor: pointer;
-    display: var(--flexbox);
+    display: flex;
     align-items: center;
     gap: var(--gap);
     flex-direction: column;
+    border: 2px solid var(--borderColor);
+    padding: 9px;
+    border-radius: 4px;
+  }
+  .menuIcon:hover {
+    background: var(--hoverbg);
   }
   .menuIcon span {
     width: 28px;
     height: 4px;
     background: var(--iconbg);
     border-radius: 4px;
+    transition: all 0.5s ease;
   }
+  /* MAKE SPAN FOR CANCEL ICON LOOK LIKE AN X SHAPE */
+  #middlebar.remove {
+    display: none;
+  }
+
+  #topbar.crossForward {
+    transform: rotate(135deg) translate(6px);
+  }
+
+  #bottombar.crossBackward {
+    transform: rotate(-135deg) translate(6px);
+  }
+
   #sidebarContainer {
     position: fixed;
     right: -100%;
     transition: all 0.5s ease;
-    width: var(--fullsize);
+    width: 100%;
     height: 100dvh;
     z-index: 2;
   }
@@ -47,13 +67,14 @@
   .sidebar {
     position: absolute;
     right: 0;
+    bottom: 0;
     background: var(--sidebarbg);
     width: 70%;
-    height: var(--fullsize);
+    height: 100%;
     display: block;
   }
   .sidebar nav {
-    display: var(--flexbox);
+    display: flex;
     flex-direction: column;
     gap: calc(2 * var(--gap));
     padding-top: 22px;
@@ -61,16 +82,17 @@
   .sidebar nav a {
     text-decoration: none;
     color: #fafafa;
-    border: 2px solid var(--iconbg);
+    border: 2px solid var(--borderColor);
     border-radius: 12px;
     text-align: center;
     margin: 0 15px;
-    font-size: 1rem;
+    padding: 8px;
+    font-size: 1.2rem;
     font-weight: 600;
     transition: all 0.6s ease;
   }
   .sidebar nav a:hover {
-    color: #6366f1;
     border: 2px solid #fafafa;
+    background: var(--hoverbg);
   }
 }
