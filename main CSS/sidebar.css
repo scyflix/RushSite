@@ -64,15 +64,12 @@
     right: 0;
     background: rgba(0, 0, 0, 0.7);
   }
-  #sidebarContainer.close {
-    right: -100%;
-  }
   .sidebar {
     position: absolute;
     right: 0;
     bottom: 0;
     background: var(--sidebarbg);
-    width: 80%;
+    width: 70%;
     height: 100%;
     display: block;
   }
