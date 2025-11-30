@@ -67,6 +67,23 @@ a .brand {
   font-weight: 700;
   color: #fafafa;
 }
+.mainLogo {
+    width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #5b21b6, #4dd0e1);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fafafa;
+  margin: 10px auto;
+  transition: all 0.8s ease;
+}
+.mainLogo:hover {
+  transform: translateY(-10px) rotateY(20deg);
+  box-shadow: 0 0 15px #0a172b;
+}
 .muted {
   color: #6d82a0;
   font-size: 13px;
