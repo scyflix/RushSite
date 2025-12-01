@@ -25,10 +25,10 @@ function lightmode() {
   body.classList.toggle("light-mode");
 
   if (body.classList.contains("light-mode")) {
-    lightBtn.innerText = "Dark Mode";
+    lightBtn.innerText = "🌙";
     localStorage.setItem("theme", "light");
   } else {
-    lightBtn.innerText = "Light Mode";
+    lightBtn.innerText = "🌞";
     localStorage.setItem("theme", "dark");
   }
 }
