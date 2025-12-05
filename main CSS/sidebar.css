@@ -1,9 +1,10 @@
 :root {
-  --iconbg: #6265fd;
+  --iconbg: #1E90FF;
   --gap: 4px;
-  --sidebarbg: #0a172b;
-  --borderColor: #314564;
-  --hoverbg: rgba(0, 0, 0, 0.4);
+  --sidebarbg: #272727;
+  --borderColor: #3882f1;
+  --hoverbg: #00000066;
+  --nav-bg: #121111;
 }
 .menuIcon,
 .sidebar {
@@ -19,7 +20,7 @@
 
   .menuIcon {
     position: absolute;
-    right: 10px;
+    right: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -69,7 +70,6 @@
     right: 0;
     bottom: 0;
     background: var(--sidebarbg);
-    width: 70%;
     height: 100%;
     display: block;
   }
@@ -80,6 +80,7 @@
     padding-top: 22px;
   }
   .sidebar nav a {
+    background: var(--nav-bg);
     text-decoration: none;
     color: #fafafa;
     border: 2px solid var(--borderColor);
@@ -96,3 +97,14 @@
     background: var(--hoverbg);
   }
 }
+
+  @media (min-width: 600px) {
+  .sidebar {
+    width: 50%;
+  }
+  }
+  @media (max-width: 600px) {
+  .sidebar {
+    width: 80%;
+  }
+  }

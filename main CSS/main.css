@@ -1,6 +1,17 @@
+:root {
+  --accent1: #00FF85;
+  --accent2: #1E90FF;
+  --text-color: #ffffff;
+  --heading-color: whitesmoke;
+  --primary-button-hover-color: #11b37d ;
+  --secondary-button-hover-color: #4ca3fb;
+  --button-text-color: #121212;
+  --card-background-color: #444444;
+  --card-border-color: #a7b4c7;
+  --hover-border: #FF0099;
+}
 #hero {
   text-align: center;
-  background: linear-gradient(to bottom right, #eaf3ff, #ffffff);
   padding: 30px 0;
   max-width: 800px;
   margin: 10px auto;
@@ -8,8 +19,10 @@
   line-height: 1.6;
 }
 h2 {
-  color: #0a172b;
+  color: var(--heading-color);
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 h3.icon {
   font-size: 40px;
@@ -17,7 +30,7 @@ h3.icon {
   margin-bottom: 20px;
 }
 h4 {
-  color: #0a172b;
+  color: var(--heading-color);
   margin-bottom: 10px;
 }
 .features {
@@ -33,39 +46,39 @@ a.btn::after {
   top: 0;
 }
 a.btn:hover::after {
-  opacity: 1;
+    opacity: 1;
   margin-left: 5px;
 }
 
 a.btn {
   position: relative;
   display: inline-block;
-  transition: background-color 0.4s ease;
-  background-color: #4f46e5;
+  background-color: var(--accent1);
   padding: 14px 36px;
   margin: 10px;
-  color: #fff;
+  color: var(--button-text-color);
   font-weight: 600;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(79,70,229,0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background-cokor 0.4s ease;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease,
+    background-color 0.4s ease;
 }
 
 a.btn:hover {
+  background-color: var(--primary-button-hover-color);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(79,70,229,0.25);
 }
 #templatesBtn {
-  background-color: #059669;
-  box-shadow: 0 5px 15px rgba(5,150,105,0.2);
+  background-color: var(--accent2);
+  box-shadow: 0 5px 15px rgb(45, 96, 51);
 }
 
 #templatesBtn:hover {
-  background-color: #10b981;
+  background-color: var(--secondary-button-hover-color);
 }
 p {
-  color: #07101c;
+  color: var(--text-color);
 }
 
 #cards {
@@ -76,10 +89,10 @@ p {
   border-radius: 30px;
 }
 .card {
-  background-color: #fafafa;
-  color: #07101c;
+  background-color: var(--card-background-color);
+  color: var(--text-color);
   box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 12px;
-  border: #a7b4c7 1px solid;
+  border: var(--card-border-color) 1px solid;
   border-radius: 16px;
   padding: 20px;
   transition: transform 0.5s ease;
@@ -109,19 +122,21 @@ form input {
   border: 1px solid #6ca0ff;
   border-radius: 12px;
   padding: 10px 14px;
-  font-size: 15px;
-  transition: .2s ease;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
 }
-
+form input::placeholder {
+  color: #515151;
+}
 form input:focus {
   border-color: #4f46e5;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(79,70,229,.25);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
 }
 
 form button {
-   display: inline-block;
-  background: #6366f1;
+  display: inline-block;
+  background: var(--accent2);
   color: white;
   text-decoration: none;
   padding: 12px 30px;
@@ -134,7 +149,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #4338ca;
+  background-color: var(--secondary-button-hover-color);
   transform: translateY(-3px);
 }
 label {
@@ -148,7 +163,7 @@ footer {
   color: #ffffff;
 }
 #smallanimation {
-  animation: flash 3s ease-in-out infinite;
+  animation: flash 3s alternate infinite;
   border-radius: 10px;
   padding: 0 0 0 5px;
   margin-right: 5px;
@@ -171,10 +186,7 @@ footer {
     background-color: #10b981;
   }
 }
-#howToGetStarted {
-  border-radius: 30px;
-}
-#howToGetStarted p {
+#howToGetStarted p:nth-child(2) {
   margin-left: 20px;
   font-weight: 600;
   font-size: 18px;
@@ -184,6 +196,12 @@ ol {
   margin: 10px 40px 20px;
 }
 @media (max-width: 600px) {
+    #hero {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 22px;
+  }
   #cards {
     grid-template-columns: 1fr;
   }

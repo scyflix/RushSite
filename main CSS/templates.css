@@ -1,18 +1,26 @@
-.templates-btn {
+:root {
+  --card-background-color: #444444;
+  --primary-text: #ffffff;
+  --accent2: #0080ff;
+  --button-text-color: #121212;
+}
+.templates-btn a,
+a.templates-btn {
   display: inline-block;
-  background: #6366f1;
-  color: white;
+  background: var(--accent2);
+  color: var(--button-text-color);
   text-decoration: none;
   padding: 12px 30px;
   border-radius: 10px;
   font-weight: 600;
   transition: 0.3s ease;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 10px;
 }
 
-.templates-btn:hover {
-  background: #248eff;
+.templates-btn a:hover,
+a.templates-btn:hover {
+  opacity: 0.7;
   transform: translateY(-2px);
 }
 
@@ -21,17 +29,10 @@
   padding: 25px 10px;
   max-width: 700px;
   margin: 0 auto 25px;
-  border-bottom: 2px solid rgba(0,0,0,0.08);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
 }
 
-#allTemplates {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 50px auto;
-  width: 100%;
-  gap: 10px;
-}
+#allTemplates,
 #locked-template {
   display: flex;
   flex-wrap: wrap;
@@ -40,10 +41,12 @@
   width: 100%;
   gap: 10px;
 }
+
 .template {
-  background: #ffffff;
-border: 1px solid rgba(99, 102, 241, 0.08); /* hint of indigo brand */
-backdrop-filter: blur(4px);
+  position: relative;
+  background: var(--card-background-color);
+  border: 2px solid var(--accent2);
+  backdrop-filter: blur(4px);
   border-radius: 8px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
   transition: all 0.5s ease;
@@ -55,10 +58,11 @@ backdrop-filter: blur(4px);
   transform: translateY(-6px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
-a {
+#allTemplates a:nth-child(1) {
   text-decoration: none;
-  color: #1e293b;
+    color: var(--primary-text);
 }
+
 .template h3 {
   margin: 15px 0;
   font-size: 18px;
@@ -69,9 +73,8 @@ a {
   object-fit: cover;
   border-radius: 6px;
   transition: all 0.5s ease;
-  border: 2px solid #6366f1;
+  border: 2px solid var(--accent2);
 }
-
 
 /* Text Section */
 .desc {
@@ -84,11 +87,11 @@ a {
 .descText {
   margin: 0 15px 15px 15px;
   font-size: 14px;
-  color: #475569;
+  color: var(--primary-text);
 }
 .lock {
   position: absolute;
-  top:5px;
+  top: 5px;
   right: 12px;
   background: rgb(0, 0, 0);
   color: #fff;
@@ -99,8 +102,8 @@ a {
 }
 .free {
   background: #248eff;
-    position: absolute;
-  top:5px;
+  position: absolute;
+  top: 5px;
   right: 12px;
   color: #fff;
   font-size: 14px;
@@ -113,11 +116,16 @@ a {
 }
 @media (max-width: 600px) {
   .template {
-    width: 99%;
+    width: calc(100% - 20px);
+  }
+  #allTemplates,
+  #locked-template {
+    padding: 0 10px;
   }
   a.btn {
     display: block;
     margin: 10px auto;
     text-align: center;
+    color: var(--button-text-color);
   }
 }

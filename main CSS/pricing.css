@@ -1,3 +1,15 @@
+:root {
+  --accent1: #00ff85;
+  --accent2: #1e90ff;
+  --text-color: #ffffff;
+  --heading-color: whitesmoke;
+  --primary-button-hover-color: #11b37d;
+  --secondary-button-hover-color: #4ca3fb;
+  --button-text-color: #121212;
+  --card-background-color: #444444;
+  --card-border-color: #a7b4c7;
+  --hover-border: #ff0099;
+}
 h1 {
   margin-top: 50px;
 }
@@ -14,19 +26,20 @@ h1 {
 .price {
   flex: 1;
   min-width: 280px;
-  background-color: #fafafa;
-  color: #07101c;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-  border: 1px solid #a7b4c7;
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 10px rgba(255, 246, 246, 0.285);
+  border: 2px solid var(--card-border-color);
   border-radius: 16px;
   padding: 40px;
   transition: transform 0.5s ease, border-color 0.5s ease;
-  min-height: 500px;
+  min-height: 550px;
+  height: auto;
 }
 
 .price:hover {
   transform: translateY(-6px);
-  border-color: #4f46e5;
+  border-color: var(--hover-border);
 }
 
 .price h3 {
@@ -37,29 +50,30 @@ h1 {
 
 #container .price:nth-child(1) ul li::marker {
   color: #6ca0ff;
-  font-size: 24px;
+  font-size: 34px;
 }
 #container .price:nth-child(2) ul li::marker {
-  color: #4f46e5;
-  font-size: 24px;
+  color: var(--accent2);
+  font-size: 34px;
 }
 #container .price:nth-child(3) ul li::marker {
-  color: #059669;
-  font-size: 24px;
+  color: var(--accent1);
+  font-size: 34px;
 }
 
 a.priceBtn {
   display: block;
-  background-color: #4f46e5;
+  background-color: var(--accent2);
   padding: 14px 36px;
   margin: 40px auto 0;
-  color: #fff;
+  color: var(--button-text-color);
   font-weight: 600;
   border-radius: 12px;
   text-align: center;
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease,
+    background-color 0.4s ease;
 }
 
 a.priceBtn::after {
@@ -71,7 +85,7 @@ a.priceBtn::after {
 
 a.priceBtn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(79,70,229,0.25);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
   opacity: 0.9;
 }
 
