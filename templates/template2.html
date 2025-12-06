@@ -8,25 +8,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      class="editorScript"
-      src="https://www.googletagmanager.com/gtag/js?id=G-FMKP1N6MX3"
-    ></script>
-    <script class="editorScript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-FMKP1N6MX3");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Add your name to the title-->
     <title>Portfolio</title>
+    <link id="editorStyle" rel="stylesheet" href="editor.css" />
+
     <style>
       /* Portfolio Template by Scybud
   Author: Abdulroqib Oladipo
@@ -174,7 +161,7 @@
 
       /* HEADER NAVIGATION LINKS STYLE */
       nav a {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
         margin-left: 20px;
         color: var(--nav-link);
         text-decoration: none;
@@ -378,18 +365,21 @@
         /* STYLE SIDEBAR */
         #sidebar {
           backdrop-filter: blur(90px) brightness(20%);
-          width: 50vw;
-          height: 100vh;
+          width: 70%;
+          height: 100%;
           top: 0;
-          left: 0;
+          left: -100%;
           position: fixed;
           z-index: 1000;
-          display: none;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
         }
 
         /* ENSURE SIDEBAR SHOWS ON MENU ICON CLICK */
         #sidebar.show {
-          display: block;
+          left: 0;
         }
 
         /* STYLE SPAN ELEMENT TO LOOK LIKE MENU ICON */
@@ -408,7 +398,7 @@
           display: flex;
           flex-direction: column;
           cursor: pointer;
-          margin-top: 10px;
+          margin: 10px;
         }
         #cancelIcon span {
           background-color: var(--cancel-bar);
@@ -417,6 +407,7 @@
         /* STYLE CANCEL ICON INSIDE SIDEBAR */
         #cancelIcon {
           margin: 20px;
+          margin-left: auto;
         }
 
         /* MAKE SPAN FOR CANCEL ICON LOOK LIKE AN X SHAPE */
@@ -445,109 +436,7 @@
 
       /* You are free to use this template but please give credit to Scybud and Abdulroqib Oladipo */
     </style>
-    <!--EDITOR STYLE-->
-    <style id="editorStyle">
-      h1 {
-        margin: 0 10px;
-      }
-      #header::after {
-        content: "(click any to start editor)";
-      }
-      #header {
-        background: #0a172b;
-        width: 100%;
-        margin: 0;
-        padding: 10px 0;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-sizing: border-box;
-      }
-      #header nav a {
-        text-decoration: none;
-        color: #fafafa;
-        margin: 0 15px;
-        font-size: 1em;
-        font-weight: 600;
-      }
-      #header nav a:hover {
-        color: #6366f1;
-      }
-      button {
-        padding: 12px 22px;
-        border: none;
-        border-radius: 12px;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: 600;
-      }
-      button:hover {
-        opacity: 0.7;
-      }
-      #action {
-        top: 20px;
-        right: 20px;
-        display: flex;
-        gap: 10px;
-        margin: 10px 0 0 10px;
-      }
-      .actionbtn {
-        margin-bottom: 20px;
-        top: 20px;
-        right: 20px;
-        color: #fff;
-        border-radius: 6px;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
-      #resetbtn {
-        background: #ff4d4d;
-      }
-      #downloadbtn {
-        background: #4caf50;
-      }
-      #lightmode {
-        color: #0a0a0a;
-      }
-      a.logo {
-        text-decoration: none;
-        color: #fafafa;
-        font-size: 2em;
-        font-weight: bold;
-        margin: 0 16px;
-        margin-bottom: 1em;
-      }
-      @media (max-width: 600px) {
-        #header {
-          flex-direction: column;
-        }
-      }
-      .logoLink {
-        text-decoration: none;
-        margin: 15px;
-      }
-      a .brand {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        text-decoration: none;
-      }
-      .logo {
-        width: 44px;
-        height: 44px;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #5b21b6, #4dd0e1);
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-        color: #fafafa;
-      }
-      .muted {
-        color: #6d82a0;
-        font-size: 14px;
-      }
-    </style>
+   
   </head>
   <body>
     <div id="header">

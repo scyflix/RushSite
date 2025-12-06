@@ -28,6 +28,9 @@ body {
   animation: fadeIn 0.4s ease-in-out;
   overflow-x: hidden;
 }
+body.sidebar-active {
+  overflow: hidden;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;

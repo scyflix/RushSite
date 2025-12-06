@@ -7,50 +7,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      class="editorScript"
-      src="https://www.googletagmanager.com/gtag/js?id=G-FMKP1N6MX3"
-    ></script>
-    <script class="editorScript">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-FMKP1N6MX3");
+    <script src="export.js">
+      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
+    </script>
+    <script src="editor.js">
+      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link id="editorStyle" rel="stylesheet" href="editor.css" />
     <style>
       /* Light mode variables */
       body.light-mode {
-        --bg: #e5e7eb;
-        --text: #111827;
+        --bg: #484b6a;
+        --text: #ffffff;
         --accent1: #6366f1;
         --accent2: #00bcd4;
-        --border: rgba(0, 0, 0, 0.614);
+        --secondary-bg: #025262;
+        --border: rgba(117, 117, 117, 0.614);
         --border-hover: rgba(65, 64, 64, 0.816);
       }
-      /* Light mode theme */
-      body.light-mode {
-        --bg: #e5e7eb; /* soft neutral gray */
-        --text: #111827; /* dark gray for readability */
-        --accent1: #6366f1; /* violet accent */
-        --accent2: #00bcd4; /* cyan accent */
-      }
-
       /* Footer appearance in light mode */
       body.light-mode footer {
-        background: #d4d4d4;
+        background: #bdbdbd;
         color: #000000;
       }
-
+      
       body.light-mode footer a {
-        color: #0466fa;
+        color: #5530a7;
+        font-weight: 700;
       }
 
       /* Buttons in light mode */
@@ -76,6 +62,7 @@
         --text: #ffffff;
         --accent1: #6c63ff;
         --accent2: #00d4ff;
+        --secondary-bg: #025262;
         --border: rgba(255, 255, 255, 0.1);
         --border-hover: rgba(133, 133, 133, 0.1);
       }
@@ -175,9 +162,8 @@
       }
 
       .secondary {
-        background: rgba(255, 255, 255, 0.08);
+        background: var(--secondary-bg);
         color: var(--text);
-        backdrop-filter: blur(10px);
         border: 1px solid var(--border);
       }
       .primary::after,
@@ -269,100 +255,6 @@
       .primary,
       .secondary {
         transition: all 0.9s ease;
-      }
-    </style>
-    <style id="editorStyle">
-      h1 {
-        margin: 0 10px;
-      }
-      #header::after {
-        content: "(click any text to start editing)";
-        color: #ffffff;
-      }
-      header {
-        background: #0a172b;
-        width: 100%;
-        margin: 0;
-        padding: 10px 0;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-sizing: border-box;
-      }
-      header nav a {
-        text-decoration: none;
-        color: #fafafa;
-        margin: 0 15px;
-        font-size: 1em;
-        font-weight: 600;
-      }
-      header nav a:hover {
-        color: #6366f1;
-      }
-      #action {
-        top: 20px;
-        right: 20px;
-        display: flex;
-        gap: 10px;
-        margin: 10px 0 0 10px;
-      }
-      .actionbtn {
-        margin-bottom: 20px;
-        top: 20px;
-        right: 20px;
-        color: #fff;
-        border-radius: 6px;
-        padding: 8px 12px;
-        font-size: 0.9rem;
-      }
-      #resetbtn {
-        background: #ff4d4d;
-      }
-      #downloadbtn {
-        background: #4caf50;
-      }
-      #lightmode {
-        color: #0a0a0a;
-      }
-      a.logo {
-        text-decoration: none;
-        color: #fafafa;
-        font-size: 2em;
-        font-weight: bold;
-        margin: 0 16px;
-        margin-bottom: 1em;
-      }
-      @media (max-width: 600px) {
-        header {
-          flex-direction: column;
-        }
-      }
-      .logoLink {
-        text-decoration: none;
-        margin: 15px;
-      }
-      a .brand {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        text-decoration: none;
-      }
-      .logo {
-        width: 44px;
-        height: 44px;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #5b21b6, #4dd0e1);
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-        color: #fafafa;
-      }
-      .muted {
-        color: #6d82a0;
-        font-size: 14px;
       }
     </style>
   </head>
@@ -487,12 +379,6 @@
         projectsSection.style.display = "flex";
         contactSection.style.display = "none";
       });
-    </script>
-    <script src="export.js">
-      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
-    </script>
-    <script src="editor.js">
-      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
     </script>
   </body>
 </html>

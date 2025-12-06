@@ -4,7 +4,6 @@ const topbar = document.getElementById("topbar");
 const middlebar = document.getElementById("middlebar");
 const bottombar = document.getElementById("bottombar");
 
-
 //Sidebar cancel icon
 function cancelIcon() {
   topbar.classList.add("crossForward");
