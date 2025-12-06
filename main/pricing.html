@@ -62,6 +62,29 @@
         </nav>
       </div>
     </div>
+    <div id="PopupContainer">
+      <section id="waitlistform">
+        <span id="cancelPopup"> X </span>
+        <h2>Get Updates</h2>
+        <p>
+          Be the first to access new features. Secure your spot now
+          <span>(No spam)</span>.
+        </p>
+        <p class="features">⚡Fast | 🎨Beautiful | 🧠Easy</p>
+        <form action="https://formspree.io/f/mwpakenq" method="POST">
+          <label for="email"> Your email: </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+          <button type="submit" class="btn">Join Early Access 🚀</button>
+        </form>
+      </section>
+    </div>
+
     <h1>Pick a Plan</h1>
     <div id="container">
       <div class="price">
@@ -101,5 +124,6 @@
       </div>
     </div>
     <script src="sidebar.js"></script>
+    <script src="popup.js"></script>
   </body>
 </html>

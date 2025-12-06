@@ -12,22 +12,21 @@
 }
 #hero {
   text-align: center;
-  padding: 30px 0;
-  max-width: 800px;
-  margin: 10px auto;
+  padding: 80px 0;
+  margin: 40px auto;
   border-radius: 30px;
-  line-height: 1.6;
 }
 h2 {
   color: var(--heading-color);
   text-align: center;
-  width: 100%;
   margin: 0 auto;
 }
 h3.icon {
+  padding: 0;
   font-size: 40px;
   text-align: center;
-  margin-bottom: 20px;
+  margin:0 auto 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.146);
 }
 h4 {
   color: var(--heading-color);
@@ -60,7 +59,7 @@ a.btn {
   font-weight: 600;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 5px 15px rgba(78, 70, 229, 0.089);
   transition: transform 0.4s ease, box-shadow 0.4s ease,
     background-color 0.4s ease;
 }
@@ -71,7 +70,7 @@ a.btn:hover {
 }
 #templatesBtn {
   background-color: var(--accent2);
-  box-shadow: 0 5px 15px rgb(45, 96, 51);
+  box-shadow: 0 5px 15px rgba(45, 96, 51, 0.502);
 }
 
 #templatesBtn:hover {
@@ -79,6 +78,7 @@ a.btn:hover {
 }
 p {
   color: var(--text-color);
+  font-size: var(1rem);
 }
 
 #cards {
@@ -102,59 +102,7 @@ p {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
   transform: scale(1.03);
 }
-/* Waitlist Form */
-#waitlistform {
-  text-align: center;
-}
 
-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-form input {
-  width: 90%;
-  max-width: 420px;
-  height: 45px;
-  border: 1px solid #6ca0ff;
-  border-radius: 12px;
-  padding: 10px 14px;
-  font-size: 1.2rem;
-  transition: 0.2s ease;
-}
-form input::placeholder {
-  color: #515151;
-}
-form input:focus {
-  border-color: #4f46e5;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
-}
-
-form button {
-  display: inline-block;
-  background: var(--accent2);
-  color: white;
-  text-decoration: none;
-  padding: 12px 30px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.3s ease;
-  font-size: 15px;
-  margin-top: 10px;
-  border: none;
-}
-
-form button:hover {
-  background-color: var(--secondary-button-hover-color);
-  transform: translateY(-3px);
-}
-label {
-  font-weight: 600;
-}
 footer {
   text-align: center;
   background-color: #07101c;

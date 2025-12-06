@@ -40,7 +40,6 @@ body {
 }
 h1 {
   text-align: center;
-  font-weight: 700;
   font-size: var(--fs-h1);
 }
 header {
@@ -99,7 +98,7 @@ a .brand {
 }
 .mainLogo:hover {
   transform: translateY(-10px) rotateY(20deg);
-  box-shadow: 0 0 15px #5e82b8;
+  box-shadow: 0 0 15px #5e82b86c;
 }
 .muted {
   color: #6d82a0;
@@ -109,7 +108,7 @@ a .brand {
 h2 {
   font-size: var(--fs-h2);
   text-align: center;
-  margin: 20px 0;
+  margin: 40px 0;
 }
 section {
   background-color: var(--section-bg);

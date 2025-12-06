@@ -8,7 +8,6 @@
   </head>
 
   <body>
-    <header>
       <div class="menuIcon">
         <span id="topbar"></span>
         <span id="middlebar"></span>
@@ -27,7 +26,6 @@
         </ul>
         <a href="../../index.html">Home</a>
       </nav>
-    </header>
     <div id="sidebarContainer">
       <div class="sidebar">
         <nav>
@@ -43,6 +41,28 @@
           <a href="../../index.html">Home</a>
         </nav>
       </div>
+    </div>
+     <div id="PopupContainer">
+      <section id="waitlistform">
+        <span id="cancelPopup"> X </span>
+        <h2>Get Updates</h2>
+        <p>
+          Be the first to access new features. Secure your spot now
+          <span>(No spam)</span>.
+        </p>
+        <p class="features">⚡Fast | 🎨Beautiful | 🧠Easy</p>
+        <form action="https://formspree.io/f/mwpakenq" method="POST">
+          <label for="email"> Your email: </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+          <button type="submit" class="btn">Join Early Access 🚀</button>
+        </form>
+      </section>
     </div>
     <main>
       <h1>Learn How To Use RushSite</h1>
@@ -146,5 +166,7 @@
 
     <footer>© 2025 RushSite — Build & Export Faster</footer>
     <script src="../sidebar.js"></script>
+        <script src="../popup.js"></script>
+
   </body>
 </html>

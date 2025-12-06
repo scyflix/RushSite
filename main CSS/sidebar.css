@@ -1,10 +1,12 @@
 :root {
-  --iconbg: #1E90FF;
+  --iconbg: #1e90ff;
   --gap: 4px;
   --sidebarbg: #272727;
   --borderColor: #3882f1;
   --hoverbg: #00000066;
   --nav-bg: #121111;
+  --radius: 12px;
+  --transition: 0.5s ease;
 }
 .menuIcon,
 .sidebar {
@@ -28,7 +30,7 @@
     flex-direction: column;
     border: 2px solid var(--borderColor);
     padding: 9px;
-    border-radius: 4px;
+    border-radius: calc(var(--radius) / 3);
   }
   .menuIcon:hover {
     background: var(--hoverbg);
@@ -38,7 +40,7 @@
     height: 4px;
     background: var(--iconbg);
     border-radius: 4px;
-    transition: all 0.5s ease;
+    transition: all var(--transition);
   }
   /* MAKE SPAN FOR CANCEL ICON LOOK LIKE AN X SHAPE */
   #middlebar.remove {
@@ -56,7 +58,7 @@
   #sidebarContainer {
     position: fixed;
     right: -100%;
-    transition: all 0.5s ease;
+    transition: right var(--transition);
     width: 100%;
     height: 100dvh;
     z-index: 2;
@@ -84,27 +86,27 @@
     text-decoration: none;
     color: #fafafa;
     border: 2px solid var(--borderColor);
-    border-radius: 12px;
+    border-radius: var(--radius);
     text-align: center;
     margin: 0 15px;
     padding: 8px;
     font-size: 1.2rem;
     font-weight: 600;
-    transition: all 0.6s ease;
+    transition: background-color var(--transition), border var(--transition);
   }
   .sidebar nav a:hover {
     border: 2px solid #fafafa;
-    background: var(--hoverbg);
+    background-color: var(--hoverbg);
   }
 }
 
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
   .sidebar {
     width: 50%;
   }
-  }
-  @media (max-width: 600px) {
+}
+@media (max-width: 600px) {
   .sidebar {
     width: 80%;
   }
-  }
+}
