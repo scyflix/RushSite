@@ -10,6 +10,9 @@
   --card-border-color: #a7b4c7;
   --hover-border: #ff0099;
 }
+body.popup-active {
+  overflow: hidden;
+}
 /*Popup container*/
 #PopupContainer {
   position: fixed;
@@ -18,7 +21,7 @@
   z-index: 200;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100dvh;
   display: flex;

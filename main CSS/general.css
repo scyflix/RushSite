@@ -111,6 +111,7 @@ h2 {
   margin: 40px 0;
 }
 section {
+  border: 1px solid #e2e8f0;
   background-color: var(--section-bg);
   padding: var(--spacing);
   margin: calc(var(--spacing) * 2) auto;

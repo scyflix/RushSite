@@ -17,10 +17,14 @@
   --fs-h1: 2.5rem;
   --fs-h2: 1.8rem;
   --transition: 0.3s ease;
-   --button-text-color: #121212;
-    --accent2: #1E90FF;
-      --secondary-button-hover-color: #4ca3fb;
-
+  --button-text-color: #121212;
+  --accent2: #1e90ff;
+  --secondary-button-hover-color: #4ca3fb;
+  --iconbg: #6265fd;
+  --gap: 4px;
+  --sidebarbg: var(--header-bg);
+  --borderColor: #314564;
+  --hoverbg: rgba(0, 0, 0, 0.9);
 }
 html {
   scroll-behavior: smooth;
@@ -33,7 +37,9 @@ body {
   color: var(--primary-text);
   padding: 0 20px;
 }
-
+body.popup-active {
+  overflow: hidden;
+}
 /* Navigation */
 nav {
   background: var(--header-bg);
@@ -90,8 +96,6 @@ h2 {
   margin-top: 30px;
   font-size: 24px;
   color: var(--primary-text);
-  display: flex;
-  align-items: center;
   gap: 8px;
 }
 
@@ -137,14 +141,7 @@ footer {
   font-size: 14px;
   color: #64748b;
 }
-
-:root {
-  --iconbg: #6265fd;
-  --gap: 4px;
-  --sidebarbg: var(--header-bg);
-  --borderColor: #314564;
-  --hoverbg: rgba(0, 0, 0, 0.9);
-}
+/* Sidebar for mobile */
 .menuIcon,
 .sidebar {
   display: none;
@@ -240,7 +237,6 @@ footer {
     border: 2px solid #878484;
   }
 }
-
 /*Popup container*/
 #PopupContainer {
   position: fixed;
@@ -249,23 +245,23 @@ footer {
   z-index: 200;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100dvh;
   display: flex;
 }
 #PopupContainer.cancel {
-    animation: slideOut 1s ease forwards;
+  animation: slideOut 1s ease forwards;
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
   }
-  @keyframes slideOut {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(100px);
-      z-index: -3;
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+    z-index: -3;
   }
 }
 #cancelPopup {

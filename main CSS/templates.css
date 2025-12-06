@@ -43,6 +43,7 @@ a.templates-btn:hover {
 }
 
 .template {
+  margin-top: 10px;
   position: relative;
   background: var(--card-background-color);
   border: 2px solid var(--accent2);
