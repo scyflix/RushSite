@@ -58,7 +58,7 @@
       /* LIGHT MODE VARIABLES */
       body.light-mode {
         --bg: #e5e7eb; /* Muted gray background, softer than pure white */
-        --text: #1f2937; /* Dark slate text for readability */
+        --text: #030405; /* Dark slate text for readability */
         --header-bg: #d1d5db; /* Subtle gray header */
         --hero-bg: linear-gradient(
           145deg,
@@ -178,9 +178,9 @@
 
       /* LIST OF ALL SKILLS STYLE */
       #skills-list div {
-        background: var(--footer-text);
+        background: var(--accent2);
         margin: 8px;
-        color: #000000;
+        color: var(--text);
         padding: 6px;
         border-radius: var(--radius);
       }
@@ -217,6 +217,8 @@
 
       /* INDIVIDUAL PROJECT STYLE */
       .project {
+        min-width: 240px;
+        width: auto;
         border: 2px solid var(--accent2);
         border-radius: var(--radius);
         padding: 15px 10px;
@@ -238,6 +240,10 @@
       @media (max-width: 600px) {
         .project {
           width: 90%;
+        }
+        /* ALL SECTION STYLE */
+        section {
+          margin: 10px 0;
         }
       }
 
