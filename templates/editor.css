@@ -5,27 +5,26 @@
         content: "(click any text to start editing)";
         color: #ffffff;
       }
-      header {
-        background: #0a172b;
+      div#header {
+        background: #0a172b ;
         width: 100%;
         margin: 0;
         padding: 10px 0;
-        position: sticky;
         top: 0;
-        z-index: 1;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         box-sizing: border-box;
       }
-      .header nav a {
+      #header nav a {
         text-decoration: none;
         color: #fafafa;
         margin: 0 15px;
         font-size: 1em;
         font-weight: 600;
       }
-      .header nav a:hover {
+      #header nav a:hover {
         color: #6366f1;
       }
       #action {

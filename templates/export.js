@@ -25,7 +25,7 @@ function exportHTML() {
   doc.querySelectorAll(".actionbtn").forEach((btn) => btn.remove());
   //Remove header and editor style
   doc.querySelector("#header")?.remove();
-  doc.querySelector("#editorStyle")?.remove();
+  doc.querySelector(".editorStyle")?.remove();
   //Remove js files 
   doc.querySelectorAll("scriptFiles");
   // Turn document into a string

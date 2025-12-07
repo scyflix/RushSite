@@ -12,8 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Add your name to the title-->
     <title>Portfolio</title>
-    <link id="editorStyle" rel="stylesheet" href="editor.css" />
-
+    <link class="editorStyle" rel="stylesheet" href="editor.css" />
     <style>
       /* Portfolio Template by Scybud
   Author: Abdulroqib Oladipo
@@ -41,7 +40,7 @@
       :root {
         --bg: #0e1117;
         --text: #f5f5f5;
-        --header-bg: #111827;
+        --header-bg: oklch(from var(--bg) calc(l * 1.2) calc(c * 1.5) h);
         --h1-color: #00bcd4;
         --h2-color: #89cff0;
         --nav-link: #00e1ff;
@@ -51,13 +50,13 @@
         --hero-bg: linear-gradient(145deg, #141a24, #0e1117);
         --project-btn-bg: #007e8e;
         --project-btn-text: #00102d;
-        --cards-bg: #0b1a2a;
+        --cards-bg: oklch(from var(--bg) calc(l * 1.2) c h);
         --skills-bg: white;
         --skills-text: black;
-        --project-bg: #00102d;
+        --project-bg: oklch(from var(--bg) calc(l * 1.1) calc(c * 1) h);
         --project-shadow: #00274b;
         --project-hover-shadow: #025c68;
-        --footer-bg: #111827;
+        --footer-bg: var(--header-bg);
         --footer-text: #b0b3b8;
         --footer-link: #00bcd4;
         --menu-bar: beige;
@@ -66,9 +65,9 @@
 
       /* LIGHT MODE VARIABLES */
       body.light-mode {
-        --bg: #f3f4f6;
+        --bg: #c8c3c3;
         --text: #111827;
-        --header-bg: #ffffff;
+        --header-bg: oklch(from var(--bg) calc(l * 1.2) calc(c * 1.5) h);
         --h1-color: #007e8e;
         --h2-color: #005b7f;
         --nav-link: #00e1ff;
@@ -78,13 +77,13 @@
         --hero-bg: linear-gradient(145deg, #ffffff, #e5e7eb);
         --project-btn-bg: #007e8e;
         --project-btn-text: #ffffff;
-        --cards-bg: #ffffff;
+        --cards-bg: oklch(from var(--bg) calc(l * 1.2) c h);
         --skills-bg: #e5e7eb;
         --skills-text: #111827;
-        --project-bg: #ffffff;
+        --project-bg: oklch(from var(--bg) calc(l * 1.1) calc(c * 1) h);
         --project-shadow: rgba(0, 0, 0, 0.1);
         --project-hover-shadow: rgba(0, 0, 0, 0.3);
-        --footer-bg: #e5e7eb;
+        --footer-bg: var(--header-bg);
         --footer-text: #374151;
         --footer-link: #007bbf;
         --menu-bar: #374151;
@@ -128,7 +127,7 @@
         justify-content: space-between;
         top: 0;
         position: sticky;
-        z-index: 10;
+        z-index: 1;
         margin-top: 10px;
       }
 
@@ -345,6 +344,7 @@
         header {
           display: flex;
           justify-content: flex-start;
+          flex-direction: row;
           gap: 10px;
           margin: 0;
         }
@@ -436,7 +436,6 @@
 
       /* You are free to use this template but please give credit to Scybud and Abdulroqib Oladipo */
     </style>
-   
   </head>
   <body>
     <div id="header">
@@ -456,17 +455,17 @@
         <a href="../main/templates.html">Templates</a>
         <a href="../main/pricing.html">Pricing</a>
       </nav>
-    </div>
-    <div id="action">
-      <button id="resetbtn" class="actionbtn" onclick="removeEdit()">
-        Reset
-      </button>
-      <button id="downloadbtn" class="actionbtn" onclick="exportHTML()">
-        Export HTML
-      </button>
-      <button onclick="lightmode()" id="lightmode" class="actionbtn">
-        🌞 / 🌙
-      </button>
+      <div id="action">
+        <button id="resetbtn" class="actionbtn" onclick="removeEdit()">
+          Reset
+        </button>
+        <button id="downloadbtn" class="actionbtn" onclick="exportHTML()">
+          Export HTML
+        </button>
+        <button onclick="lightmode()" id="lightmode" class="actionbtn">
+          🌞 / 🌙
+        </button>
+      </div>
     </div>
     <hr />
     <!--SIDEBAR FOR SMALLER SCREENS-->
