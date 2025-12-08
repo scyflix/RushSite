@@ -26,7 +26,7 @@ function exportHTML() {
   //Remove header and editor style
   doc.querySelector("#header")?.remove();
   doc.querySelector(".editorStyle")?.remove();
-  //Remove js files 
+  //Remove js files
   doc.querySelectorAll("scriptFiles");
   // Turn document into a string
   const htmlString = "<!DOCTYPE html>\n" + doc.outerHTML;

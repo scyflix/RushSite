@@ -1,14 +1,14 @@
 :root {
-  --accent1: #00FF85;
-  --accent2: #1E90FF;
+  --accent1: #00ff85;
+  --accent2: #1e90ff;
   --text-color: #ffffff;
   --heading-color: whitesmoke;
-  --primary-button-hover-color: #11b37d ;
+  --primary-button-hover-color: #11b37d;
   --secondary-button-hover-color: #4ca3fb;
   --button-text-color: #121212;
   --card-background-color: #444444;
   --card-border-color: #a7b4c7;
-  --hover-border: #FF0099;
+  --hover-border: #ff0099;
 }
 #hero {
   text-align: center;
@@ -25,7 +25,7 @@ h3.icon {
   padding: 0;
   font-size: 40px;
   text-align: center;
-  margin:0 auto 20px;
+  margin: 0 auto 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.146);
 }
 h4 {
@@ -45,7 +45,7 @@ a.btn::after {
   top: 0;
 }
 a.btn:hover::after {
-    opacity: 1;
+  opacity: 1;
   margin-left: 5px;
 }
 
@@ -144,7 +144,7 @@ ol {
   margin: 10px 40px 20px;
 }
 @media (max-width: 600px) {
-    #hero {
+  #hero {
     padding: 20px;
   }
   h2 {

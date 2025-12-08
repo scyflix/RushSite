@@ -27,17 +27,17 @@ body.popup-active {
   display: flex;
 }
 #PopupContainer.cancel {
-    animation: slideOut 1s ease forwards;
+  animation: slideOut 1s ease forwards;
+}
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
   }
-  @keyframes slideOut {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(100px);
-      z-index: -3;
+  to {
+    opacity: 0;
+    transform: translateY(100px);
+    z-index: -3;
   }
 }
 #cancelPopup {
@@ -50,7 +50,7 @@ body.popup-active {
 }
 /* Waitlist Form */
 #waitlistform {
-    max-width: 90%;
+  max-width: 90%;
   position: absolute;
   text-align: center;
   z-index: 200;

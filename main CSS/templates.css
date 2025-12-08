@@ -61,7 +61,7 @@ a.templates-btn:hover {
 }
 #allTemplates a:nth-child(1) {
   text-decoration: none;
-    color: var(--primary-text);
+  color: var(--primary-text);
 }
 
 .template h3 {

@@ -41,7 +41,13 @@
       :root {
         --accent1: #d4af37; /* Muted gold for elegance */
         --accent2: #4f46e5; /* Deep indigo for professionalism */
-        --bg: linear-gradient(145deg, var(--accent2), var(--accent1));
+        --bg: linear-gradient(
+          145deg,
+          var(--accent2),
+          var(--accent1),
+          var(--accent2),
+          var(--accent1)
+        );
         --text: #e5e7eb; /* Soft light gray text */
         --header-bg: #0f172a; /* Very dark navy header */
         --hero-bg: #0a0f1c; /* Rich dark background for hero */
@@ -49,7 +55,7 @@
         --footer-bg: #111827; /* Dark footer */
         --sidebar-bg: #0f172a;
         --footer-text: #d1d5db; /* Muted light gray text */
-        --footer-link: #d4af37; /* Gold accent links */
+        --link: #d4af37; /* Gold accent links */
         --menu-bar: #e5e7eb; /* Matches text */
         --cancel-bar: #b91c1c; /* Professional deep red */
         --radius: 12px;
@@ -57,7 +63,7 @@
 
       /* LIGHT MODE VARIABLES */
       body.light-mode {
-        --bg: #e5e7eb; /* Muted gray background, softer than pure white */
+        --bg: #c4c7ce; /* Muted gray background, softer than pure white */
         --text: #030405; /* Dark slate text for readability */
         --header-bg: #d1d5db; /* Subtle gray header */
         --hero-bg: linear-gradient(
@@ -69,7 +75,7 @@
         --cards-bg: #b6b6b6; /* Gentle off-white cards */
         --footer-bg: #d1d5db; /* Balanced footer background */
         --footer-text: #374151; /* Natural dark gray text */
-        --footer-link: #4f46e5; /* Indigo links for consistency */
+        --link: #4138f5; /* Indigo links for consistency */
         --menu-bar: #374151; /* Darker gray menu bar */
         --cancel-bar: #b91c1c; /* Deep red for cancel actions */
       }
@@ -84,8 +90,13 @@
 
       /* BODY */
       body {
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
         font-family: "Poppins", sans-serif;
         background: var(--bg);
+        background-repeat: repeat;
+        background-size: contain;
         color: var(--text);
         line-height: 1.6;
       }
@@ -95,6 +106,10 @@
       }
       /* HEADER */
       header {
+        width: 100%;
+        position: sticky;
+        top: 0;
+        left: 0;
         margin: 0 auto;
         background: var(--header-bg);
         z-index: 10;
@@ -103,17 +118,10 @@
         align-items: center;
         justify-content: space-between;
       }
-      /*User Name Style*/
-      #user {
-        background: linear-gradient(120deg, var(--accent1), var(--accent2));
-        padding: 0 8px;
-        border-radius: calc(var(--radius));
-        color: #07101a;
-        font-size: 1.8rem;
-      }
       /* MAIN */
       main {
-        margin: 30px auto;
+        width: 100%;
+        margin: 30px auto 5px;
         padding: 12px;
         border-radius: 4px;
       }
@@ -127,6 +135,8 @@
       /* HEADER NAVIGATION LINKS STYLE */
       nav a {
         text-decoration: none;
+        font-size: 18px;
+        font-weight: 550;
       }
 
       /* HEADER NAVIGATION LINKS STYLE WHEN HOVERED */
@@ -136,12 +146,31 @@
 
       /* HERO SECTION STYLE */
       #hero {
+        max-width: 600px;
+        width: 80%;
+        margin: 0 auto;
         background: var(--hero-bg);
         text-align: center;
       }
+      /*User Name Style*/
+      #user {
+        background: linear-gradient(120deg, var(--accent1), var(--accent2));
+        padding: 0 8px;
+        border-radius: calc(var(--radius));
+        color: #07101a;
+        font-size: 1.8rem;
+        animation: move 20s alternate infinite;
+      }
+      /*USER NAME BACKGROUND ANIMATION*/
 
+      @keyframes move {
+        to {
+          background-position-y: -500px;
+          background-position-x: -500px;
+        }
+      }
       /*Hero Button Style*/
-      .hero-btn {
+      #hero a.hero-btn {
         background: var(--accent1);
         color: #000000;
         padding: 20px 40px;
@@ -193,9 +222,20 @@
 
       /* ALL SECTION STYLE */
       section {
-        margin: 10px;
+        margin: 10px auto;
         padding: 22px;
+        max-width: 900px;
         border-radius: var(--radius);
+      }
+      /*Transition SECTION WITH NO #hero*/
+      section:not(#hero) {
+        position: absolute;
+        left: -500%;
+        transition: all 0.6s ease;
+      }
+      section:not(#hero).animate {
+        position: relative;
+        left: 0;
       }
 
       /* CONTAINER OF ALL PROJECT */
@@ -208,7 +248,7 @@
       }
       /*ALL LINKS COLOR*/
       a {
-        color: var(--accent1);
+        color: var(--link);
       }
       /* LINKS IN CONTAINER OF ALL PROJECTS */
       #projects-container a {
@@ -222,7 +262,7 @@
         border: 2px solid var(--accent2);
         border-radius: var(--radius);
         padding: 15px 10px;
-        backdrop-filter: blur(30px) brigntness(80%);
+        backdrop-filter: blur(100px) brightness(60%);
       }
 
       /* INDIVIDUAL PROJECT STYLE ON HOVER */
@@ -264,10 +304,12 @@
         color: var(--footer-text);
         text-align: center;
         padding: 10px 0;
+        max-width: 100%;
+        margin-top: auto;
       }
 
       footer a {
-        color: var(--footer-link);
+        color: var(--link);
         text-decoration: none;
       }
 
@@ -278,7 +320,7 @@
       }
 
       /* RESPONSIVE DESIGN FOR SMALLER SCREEN WIDTH */
-      @media (max-width: 800px) {
+      @media (max-width: 600px) {
         /* make the name and menu icon stay beside each other */
         header {
           display: flex;
@@ -286,6 +328,9 @@
           flex-direction: row;
           gap: 10px;
           margin: 0;
+        }
+        #hero {
+          width: 100%;
         }
 
         /* Make the normal navigation links invisible on smaller screens */
@@ -304,7 +349,7 @@
         /* STYLE SIDEBAR */
         #sidebar {
           background: var(--sidebar-bg);
-          width: 50vw;
+          width: 80vw;
           height: 100vh;
           top: 0;
           left: 0;
@@ -343,6 +388,8 @@
         /* STYLE CANCEL ICON INSIDE SIDEBAR */
         #cancelIcon {
           margin: 20px;
+          position: absolute;
+          right: 10px;
         }
 
         /* MAKE SPAN FOR CANCEL ICON LOOK LIKE AN X SHAPE */
@@ -465,7 +512,7 @@
         <!--Add a short introduction about yourself-->
         <p contenteditable data-field="hero-text">Short intro about you</p>
         <!--About link section-->
-        <a href="#about" class="hero-btn">About Me</a>
+        <a href="#about" class="hero-btn aboutLink">About Me</a>
       </section>
 
       <!--CERTIFICATES SECTION-->
@@ -587,14 +634,84 @@
       function togglesidebar() {
         sidebar.classList.toggle("show");
       }
+      //select all sections from html
+      const about = document.getElementById("about");
+      const skills = document.getElementById("skills");
+      const projects = document.getElementById("projects");
+      const contact = document.getElementById("contact");
+      const certs = document.getElementById("certs");
+      const hero = document.getElementById("hero");
+      //show sections if link is clicked
+
+      //About Section
+      const aboutLink = document.querySelectorAll(".aboutLink");
+      aboutLink.forEach((link) => {
+        link.addEventListener("click", () => {
+          about.classList.add("animate");
+          hero.style.display = "none";
+          skills.classList.remove("animate");
+          projects.classList.remove("animate");
+          contact.classList.remove("animate");
+          certs.classList.remove("animate");
+        });
+      });
+
+      //Skills Section
+      const skillsLink = document.querySelectorAll(".skillsLink");
+      skillsLink.forEach((link) => {
+        link.addEventListener("click", () => {
+          skills.classList.add("animate");
+          hero.style.display = "none";
+          about.classList.remove("animate");
+          projects.classList.remove("animate");
+          contact.classList.remove("animate");
+          certs.classList.remove("animate");
+        });
+      });
+
+      //Projects Section
+      const projectsLink = document.querySelectorAll(".projectsLink");
+      projectsLink.forEach((link) => {
+        link.addEventListener("click", () => {
+          projects.classList.add("animate");
+          hero.style.display = "none";
+          about.classList.remove("animate");
+          skills.classList.remove("animate");
+          contact.classList.remove("animate");
+          certs.classList.remove("animate");
+        });
+      });
+
+      //Contact Section
+      const contactLink = document.querySelectorAll(".contactLink");
+      contactLink.forEach((link) => {
+        link.addEventListener("click", () => {
+          contact.classList.add("animate");
+          hero.style.display = "none";
+          projects.classList.remove("animate");
+          about.classList.remove("animate");
+          skills.classList.remove("animate");
+          certs.classList.remove("animate");
+        });
+      });
+
+      //Certification Section
+      const certLink = document.querySelectorAll(".certsLink");
+      certLink.forEach((link) => {
+        link.addEventListener("click", () => {
+          certs.classList.add("animate");
+          hero.style.display = "none";
+          contact.classList.remove("animate");
+          projects.classList.remove("animate");
+          about.classList.remove("animate");
+          skills.classList.remove("animate");
+        });
+      });
     </script>
     <script src="export.js">
       //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
     </script>
     <script src="editor.js">
-      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
-    </script>
-    <script src="../sidebar.js">
       //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
     </script>
   </body>
