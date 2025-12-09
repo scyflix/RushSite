@@ -92,7 +92,7 @@
       body {
         display: flex;
         flex-direction: column;
-        height: 100dvh;
+        height: 100vh;
         font-family: "Poppins", sans-serif;
         background: var(--bg);
         background-repeat: repeat;
@@ -121,7 +121,7 @@
       /* MAIN */
       main {
         width: 100%;
-        margin: 30px auto 5px;
+        margin: 20px auto;
         padding: 12px;
         border-radius: 4px;
       }
@@ -232,12 +232,15 @@
         position: absolute;
         left: -500%;
         transition: all 0.6s ease;
+        min-height: 100%;
       }
       section:not(#hero).animate {
         position: relative;
         left: 0;
       }
-
+      p {
+        padding: 10px;
+      }
       /* CONTAINER OF ALL PROJECT */
       #projects-container {
         display: flex;
@@ -304,7 +307,7 @@
         color: var(--footer-text);
         text-align: center;
         padding: 10px 0;
-        max-width: 100%;
+        width: 100%;
         margin-top: auto;
       }
 
