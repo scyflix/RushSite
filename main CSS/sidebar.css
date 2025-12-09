@@ -29,14 +29,14 @@
     gap: var(--gap);
     flex-direction: column;
     border: 2px solid var(--borderColor);
-    padding: 9px;
+    padding: 6px;
     border-radius: calc(var(--radius) / 3);
   }
   .menuIcon:hover {
     background: var(--hoverbg);
   }
   .menuIcon span {
-    width: 28px;
+    width: 24px;
     height: 4px;
     background: var(--iconbg);
     border-radius: 4px;
