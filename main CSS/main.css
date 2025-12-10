@@ -13,6 +13,7 @@
 #video {
   display: flex;
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 video {
   width: 50%;
@@ -21,6 +22,7 @@ video {
   object-fit: cover;
   display: block;
   z-index: 1;
+  border-radius: 10px;
 }
 #animatedTexts p {
   position: relative;
@@ -30,7 +32,7 @@ video {
   margin: 10px;
   width: fit-content;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 22px 22px 0 22px ;
   transition: right 0.7s ease, left 0.7s ease;
   animation: moveLeft 10s forwards infinite, dance 1s ease infinite;
 }
@@ -203,8 +205,9 @@ ol {
   margin: 10px 40px 20px;
 }
 @media (max-width: 600px) {
-  #animatedTexts p {
-    display: none;
+ 
+  #video {
+    flex-direction: column;
   }
   video {
     width: 100%;
