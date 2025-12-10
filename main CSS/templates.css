@@ -133,18 +133,13 @@ a.templates-btn:hover {
   font-weight: 600;
 }
 .buy {
-   background: var(--accent1);
-  position: absolute;
-  top: 5px;
-  right: 12px;
-  color: var(--button-text-color);
-  font-size: 14px;
-  padding: 6px 20px;
-  border-radius: 6px;
-  font-weight: 600;
+  background: var(--accent1);
 }
 .free {
-  background: #248eff;
+  background: var(--accent2);
+}
+.free,
+.buy {
   position: absolute;
   top: 5px;
   right: 12px;
