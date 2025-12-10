@@ -124,21 +124,24 @@ h1 {
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin: 30px;
+  margin: 10px;
 }
-
+#pricing {
+  margin: 40px 20px;
+}
 .price {
   flex: 1;
-  min-width: 280px;
   background-color: var(--card-background-color);
   color: var(--text-color);
   box-shadow: 0 4px 10px rgba(255, 246, 246, 0.285);
   border: 2px solid var(--card-border-color);
   border-radius: 16px;
-  padding: 40px;
+  padding: 10px 40px;
   transition: transform 0.5s ease, border-color 0.5s ease;
-  min-height: 550px;
+  max-height: 500px;
+  max-width: 600px;
   height: auto;
+  overflow-y: auto;
 }
 
 .price:hover {
@@ -166,6 +169,9 @@ h1 {
 }
 
 a.priceBtn {
+  position: sticky;
+  bottom: 0;
+  right: 0;
   display: block;
   background-color: var(--accent2);
   padding: 14px 36px;
@@ -203,7 +209,31 @@ a.priceBtn:hover::after {
     flex-direction: column;
     margin: 10px;
   }
+
   .price {
     width: 100%;
   }
+}
+
+/* Scrollbar styling for .template (cross-browser) */
+.price {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #4f46e5 #0f172a; /* thumb track */
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+.price::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 10px;
+}
+.price::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+.price::-webkit-scrollbar-thumb:hover {
+  filter: brightness(0.5);
+}
+.price::-webkit-scrollbar-corner {
+  background: transparent;
 }
