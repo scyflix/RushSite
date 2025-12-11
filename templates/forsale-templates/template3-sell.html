@@ -228,20 +228,20 @@
         max-width: 900px;
         border-radius: var(--radius);
       }
+      
       /*Transition SECTION WITH NO #hero*/
       section:not(#hero) {
-        position: absolute;
-        left: -500%;
-        transition: all 0.6s ease;
-        min-height: 100%;
+        position: fixed;
+        left: -100%;
+        opacity: 0;
+        transition: all 1s ease;
       }
       section:not(#hero).animate {
+        opacity: 1;
         position: relative;
         left: 0;
       }
-      p {
-        padding: 10px;
-      }
+
       /* CONTAINER OF ALL PROJECT */
       #projects-container {
         display: flex;
@@ -280,29 +280,7 @@
         font-weight: 550;
       }
 
-      /* INDIVIDUAL PROJECT STYLE ON SMALLER SCREEN FOR CONSISTENT DESIGN */
-      @media (max-width: 600px) {
-        .project {
-          width: 90%;
-        }
-        /* ALL SECTION STYLE */
-        section {
-          margin: 10px 0;
-        }
-      }
-
-      /* FOOTER STYLING */
-      footer [contenteditable="true"] {
-        cursor: text;
-        border-bottom: 1px dashed transparent;
-        transition: 0.2s;
-      }
-
-      footer [contenteditable="true"]:hover,
-      footer [contenteditable="true"]:focus {
-        border-bottom: 1px dashed #94a3b8; /* soft slate line to hint it's editable */
-      }
-
+      
       footer {
         background: var(--footer-bg);
         color: var(--footer-text);
@@ -316,15 +294,23 @@
         color: var(--link);
         text-decoration: none;
       }
-
+      
       /* Make the sidebar invisible by default */
       #sidebar,
       #menuIcon {
         display: none;
       }
-
+      
       /* RESPONSIVE DESIGN FOR SMALLER SCREEN WIDTH */
       @media (max-width: 600px) {
+        /* INDIVIDUAL PROJECT STYLE ON SMALLER SCREEN FOR CONSISTENT DESIGN */
+        .project {
+          width: 90%;
+        }
+        /* ALL SECTION STYLE */
+        section {
+          margin: 10px 0;
+        }
         /* make the name and menu icon stay beside each other */
         header {
           display: flex;
