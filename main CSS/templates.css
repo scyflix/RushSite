@@ -4,17 +4,17 @@
   --accent1: #00ff85;
   --accent2: #0080ff;
   --button-text-color: #121212;
+  --transition: 0.6 ease;
 }
-.templates-btn a,
-a.templates-btn {
+a.templates-btn,
+.buy-btn {
   display: inline-block;
-  background: var(--accent2);
   color: var(--button-text-color);
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 10px;
   font-weight: 600;
-  transition: border 0.6s ease, opacity 0.6s ease;
+  transition: border var(--transition), opacity var(--transition), transform var(--transition);
   font-size: 18px;
   border: none;
   margin-top: 10px;
@@ -24,12 +24,17 @@ a.templates-btn {
   left: 0;
   bottom: 0;
 }
-.templates-btn a:hover,
 a.templates-btn:hover {
   border: 1px solid var(--primary-text);
   opacity: 0.8;
+  transform: translateY(-2px);
 }
-
+a.templates-btn {
+  background: var(--accent2);
+}
+a.buy-btn {
+  background: var(--accent1);
+}
 .template-intro {
   text-align: center;
   padding: 25px 10px;
@@ -65,7 +70,7 @@ a.templates-btn:hover {
 
 .template:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(255, 255, 255, 0.075);
 }
 #allTemplates a:nth-child(1) {
   text-decoration: none;
@@ -82,7 +87,6 @@ a.templates-btn:hover {
   object-fit: cover;
   border-radius: 6px;
   transition: all 0.5s ease;
-  border: 2px solid var(--accent2);
 }
 
 /* Scrollbar styling for .template (cross-browser) */
@@ -92,11 +96,6 @@ a.templates-btn:hover {
   scrollbar-color: #4f46e5 #0f172a; /* thumb track */
 }
 
-/* WebKit (Chrome, Edge, Safari) */
-.template::-webkit-scrollbar-track {
-  background: #0f172a;
-  border-radius: 10px;
-}
 .template::-webkit-scrollbar-thumb {
   border-radius: 10px;
   border: 3px solid transparent;

@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Add your name to the title-->
     <title>Portfolio</title>
-    <link id="editorStyle" rel="stylesheet" href="editor.css" />
 
     <style>
       /* Portfolio Template by Scybud
@@ -425,38 +424,6 @@
     </style>
   </head>
   <body>
-    <div id="header">
-      <a href="../index.html" class="logoLink"
-        ><div class="brand">
-          <div class="logo">R</div>
-          <div>
-            <div class="muted" style="font-weight: 700">RushSite⚡</div>
-            <div class="muted" style="font-size: 13px">
-              Build, customize, export — fast
-            </div>
-          </div>
-        </div>
-      </a>
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../main/templates.html">Templates</a>
-        <a href="../main/pricing.html">Pricing</a>
-      </nav>
-      <div id="action">
-        <button id="resetbtn" class="actionbtn" onclick="removeEdit()">
-          Reset
-        </button>
-        <!--
-          <button id="downloadbtn" class="actionbtn" onclick="exportHTML()">
-            Export HTML
-          </button>
-        -->
-        <button onclick="lightmode()" id="lightmode" class="actionbtn">
-          🌞 / 🌙
-        </button>
-      </div>
-    </div>
-    <hr />
     <!--SIDEBAR FOR SMALLER SCREENS-->
     <div id="sidebar">
       <!--Sidebar icon-->
@@ -499,11 +466,11 @@
         <span></span>
       </div>
       <!--Add first letter of your name and your surname to the header-->
-      <h1 contenteditable data-field="owner-name" id="user">YN</h1>
+      <h1 id="user">YN</h1>
       <!--NAVIGATION-->
       <nav id="normal-navLinks">
         <a class="aboutLink" href="#about">About</a>
-        <a href="#certs" class="certsLink">Certifications</a>
+        <a class="certsLink"  href="#certs">Certifications</a>
         <a class="skillsLink" href="#skills">Skills</a>
         <a class="projectsLink" href="#projects">Projects</a>
         <a class="contactLink" href="#contact">Contact</a>
@@ -515,9 +482,9 @@
       <!--HERO SECTION-->
       <section id="hero">
         <!--ADD your greetings-->
-        <h2 contenteditable data-field="hero-title">[Greetings]</h2>
+        <h2>[Greetings]</h2>
         <!--Add a short introduction about yourself-->
-        <p contenteditable data-field="hero-text">Short intro about you</p>
+        <p>Short intro about you</p>
         <!--About link section-->
         <a href="#about" class="hero-btn aboutLink">About Me</a>
       </section>
@@ -526,16 +493,14 @@
       <section id="certs" class="cards">
         <h2>Certificates</h2>
         <!--Replace the <p> element text with detailed description about your certificates-->
-        <p contenteditable data-field="certs-text">
-          Details about your certificates...
-        </p>
+        <p>Details about your certificates...</p>
       </section>
 
       <!--ABOUT SECTION-->
       <section id="about" class="cards">
         <h2>About Me</h2>
         <!--Replace the <p> element text with detailed description about yourself-->
-        <p contenteditable data-field="about-text">More details about you...</p>
+        <p>More details about you...</p>
       </section>
 
       <!--SKILLS SECTION-->
@@ -543,10 +508,10 @@
         <h2>My skills</h2>
         <!--Replace the <div> element with a list of your skills-->
         <div id="skills-list">
-          <div contenteditable data-field="skill1-text">skill1-text</div>
-          <div contenteditable data-field="skill2-text">skill2-text</div>
-          <div contenteditable data-field="skill3-text">skill3-text</div>
-          <div contenteditable data-field="skill4-text">skill4-text</div>
+          <div>skill1-text</div>
+          <div>skill2-text</div>
+          <div>skill3-text</div>
+          <div>skill4-text</div>
         </div>
       </section>
 
@@ -558,76 +523,52 @@
           <!--Projects list with the class="projects" as cards-->
           <!--Add a short description of what each prject does in the <p> element under each project-->
           <div class="project">
-            <h3 contenteditable data-field="project1-title">Project name</h3>
-            <p contenteditable data-field="project1-desc">
-              Project description
-            </p>
-            <p contenteditable data-field="project1-demo">Demo: [Link Here]</p>
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
           </div>
           <div class="project">
-            <h3 contenteditable data-field="project2-title">Project name</h3>
-            <p contenteditable data-field="project2-desc">
-              Project description
-            </p>
-            <p contenteditable data-field="project2-demo">Demo: [Link Here]</p>
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
           </div>
           <div class="project">
-            <h3 contenteditable data-field="project3-title">Project name</h3>
-            <p contenteditable data-field="project3-desc">
-              Project description
-            </p>
-            <p contenteditable data-field="project3-demo">Demo: [Link Here]</p>
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
           </div>
           <div class="project">
-            <h3 contenteditable data-field="project4-title">Project name</h3>
-            <p contenteditable data-field="project4-desc">
-              Project description
-            </p>
-            <p contenteditable data-field="project4-demo">Demo: [Link Here]</p>
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
           </div>
         </div>
       </section>
       <!--CONTACT SECTION-->
       <section id="contact" class="cards">
         <h2>Send a message</h2>
-        <p contenteditable data-field="contact-text">
-          Let's collaborate and build something fun together
-        </p>
+        <p>Let's collaborate and build something fun together</p>
 
         <p>
           <span>Email:</span>
-          <span contenteditable data-field="contact-email"
-            >youremail@gmail.com</span
-          >
+          <span>youremail@gmail.com</span>
         </p>
         <p>
           <span>GitHub:</span>
-          <span contenteditable data-field="contact-GitHub"
-            >Your GitHub link</span
-          >
+          <span>Your GitHub link</span>
         </p>
         <p>
           <span>Twitter/X:</span>
-          <span contenteditable data-field="contact-Twitter"
-            >Your Twitter/X link</span
-          >
+          <span>Your Twitter/X link</span>
         </p>
         <p>
           <span>LinkedIn:</span>
-          <span contenteditable data-field="contact-LinkedIn"
-            >Your LinkedIn link</span
-          >
+          <span>Your LinkedIn link</span>
         </p>
       </section>
     </main>
     <footer>
-      <p
-        contenteditable="true"
-        data-field="footer-text"
-        title="Click to edit footer text"
-      >
-        © Your Name — All Rights Reserved
-      </p>
+      <p>&copy; Your Name — All Rights Reserved</p>
 
       <p class="powered">
         Built with <a href="https://rushsite.de/">RushSite⚡</a>
@@ -714,12 +655,6 @@
           skills.classList.remove("animate");
         });
       });
-    </script>
-    <script src="export.js">
-      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
-    </script>
-    <script src="editor.js">
-      //AFTER TEMPLATE IS EXPORTED, THIS SCRIPT IS USELESS
     </script>
   </body>
 </html>
