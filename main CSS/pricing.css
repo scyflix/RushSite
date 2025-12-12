@@ -9,6 +9,7 @@
   --card-background-color: #444444;
   --card-border-color: #a7b4c7;
   --hover-border: #ff0099;
+  --radius: 8px;
 }
 body.popup-active {
   overflow: hidden;
@@ -79,7 +80,7 @@ form input {
   max-width: 420px;
   height: 45px;
   border: 1px solid #6ca0ff;
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 10px 14px;
   font-size: 1.1rem;
   transition: 0.2s ease;
@@ -99,7 +100,7 @@ form button {
   color: var(--button-text-color);
   text-decoration: none;
   padding: 12px 30px;
-  border-radius: 10px;
+  border-radius: var(--radius);
   font-weight: 600;
   transition: 0.3s ease;
   font-size: 15px;
@@ -135,13 +136,10 @@ h1 {
   color: var(--text-color);
   box-shadow: 0 4px 10px rgba(255, 246, 246, 0.285);
   border: 2px solid var(--card-border-color);
-  border-radius: 16px;
+  border-radius: var(--radius);
   padding: 10px 40px;
   transition: transform 0.5s ease, border-color 0.5s ease;
-  max-height: 500px;
   max-width: 600px;
-  height: auto;
-  overflow-y: auto;
 }
 
 .price:hover {
@@ -178,7 +176,7 @@ a.priceBtn {
   margin: 40px auto 0;
   color: var(--button-text-color);
   font-weight: 600;
-  border-radius: 12px;
+  border-radius: var(--radius);
   text-align: center;
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
@@ -213,27 +211,4 @@ a.priceBtn:hover::after {
   .price {
     width: 100%;
   }
-}
-
-/* Scrollbar styling for .template (cross-browser) */
-.price {
-  /* Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: #4f46e5 #0f172a; /* thumb track */
-}
-
-/* WebKit (Chrome, Edge, Safari) */
-.price::-webkit-scrollbar-track {
-  background: #0f172a;
-  border-radius: 10px;
-}
-.price::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border: 3px solid transparent;
-}
-.price::-webkit-scrollbar-thumb:hover {
-  filter: brightness(0.5);
-}
-.price::-webkit-scrollbar-corner {
-  background: transparent;
 }
