@@ -31,3 +31,5 @@ sidebarContainer.addEventListener("click", (e) => {
     cancelIconRemove();
   }
 });
+
+
