@@ -77,10 +77,10 @@ nav a:active {
 
 /* Main container */
 main {
+  padding: 8px;
   margin: 0 auto;
   max-width: 860px;
   background: var(--header-bg);
-  padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -119,7 +119,8 @@ ul li::marker {
 }
 
 section {
-  margin-top: 35px;
+  width: 95%;
+  margin: 35px auto 0;
   padding: 20px;
   background: var(--section-bg);
   border-radius: 10px;

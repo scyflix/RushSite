@@ -1,0 +1,177 @@
+<!-- 
+  Portfolio Template by RushSite
+  Author: Abdulroqib Oladipo
+  Description: Beginner-friendly personal portfolio template
+  License: Allowed to be used ONLY if paid for
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS LINK-->
+    <link rel="stylesheet" href="styles.css" />
+    <!--Add your name to the title-->
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!--SIDEBAR FOR SMALLER SCREENS-->
+    <div id="sidebar">
+      <!--Sidebar icon-->
+      <div id="cancelIcon" class="cancelIcon" onclick="togglesidebar()">
+        <span id="topbar"></span>
+        <span id="middlebar"></span>
+        <span id="bottombar"></span>
+      </div>
+      <!--Sidebar links-->
+      <nav>
+        <!--Use onclick to make sidebar close when link is clicked-->
+        <a class="aboutLink" onclick="togglesidebar()" href="#about">About</a>
+        <a href="#certs" onclick="togglesidebar()" class="certsLink"
+          >Certifications</a
+        >
+
+        <a class="skillsLink" onclick="togglesidebar()" href="#skills"
+          >Skills</a
+        >
+        <a class="projectsLink" onclick="togglesidebar()" href="#projects"
+          >Projects</a
+        >
+        <a class="contactLink" onclick="togglesidebar()" href="#contact"
+          >Contact</a
+        >
+      </nav>
+    </div>
+    <!--HEADER-->
+    <header>
+      <!--Sidebar icon-->
+      <div
+        id="menuIcon"
+        role="button"
+        aria-label="Toggle navigation"
+        tabindex="0"
+        onclick="togglesidebar()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!--Add first letter of your name and your surname to the header-->
+      <h1 id="user">YN</h1>
+      <!--NAVIGATION-->
+      <nav id="normal-navLinks">
+        <a class="aboutLink" href="#about">About</a>
+        <a class="certsLink" href="#certs">Certifications</a>
+        <a class="skillsLink" href="#skills">Skills</a>
+        <a class="projectsLink" href="#projects">Projects</a>
+        <a class="contactLink" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!--MAIN SECTION-->
+    <main>
+      <!--HERO SECTION-->
+      <section id="hero">
+        <!--ADD your greetings-->
+        <h2>[Greetings]</h2>
+        <!--Add a short introduction about yourself-->
+        <p>Short intro about you</p>
+        <!--About link section-->
+        <a href="#about" class="hero-btn aboutLink">About Me</a>
+      </section>
+
+      <!--CERTIFICATES SECTION-->
+      <section id="certs" class="cards">
+        <h2>Certificates</h2>
+        <!--Replace the <p> element text with detailed description about your certificates-->
+        <p>Details about your certificates...</p>
+      </section>
+
+      <!--ABOUT SECTION-->
+      <section id="about" class="cards">
+        <h2>About Me</h2>
+        <!--Replace the <p> element text with detailed description about yourself-->
+        <p>More details about you...</p>
+      </section>
+
+      <!--SKILLS SECTION-->
+      <section id="skills" class="cards">
+        <h2>My skills</h2>
+        <!--Replace the <div> element with a list of your skills-->
+        <div id="skills-list">
+          <div>skill1-text</div>
+          <div>skill2-text</div>
+          <div>skill3-text</div>
+          <div>skill4-text</div>
+        </div>
+      </section>
+
+      <!--PROJECTS SECTION-->
+      <section id="projects" class="cards">
+        <h2>My Projects</h2>
+        <!--Projects container-->
+        <div id="projects-container">
+          <!--Projects list with the class="projects" as cards-->
+          <!--Add a short description of what each prject does in the <p> element under each project-->
+          <div class="project">
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
+          </div>
+          <div class="project">
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
+          </div>
+          <div class="project">
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
+          </div>
+          <div class="project">
+            <h3>Project name</h3>
+            <p>Project description</p>
+            <p>Demo: [Link Here]</p>
+          </div>
+        </div>
+      </section>
+      <!--CONTACT SECTION-->
+      <section id="contact" class="cards">
+        <h2>Send a message</h2>
+        <p>Let's collaborate and build something fun together</p>
+
+        <p>
+          <span>Email:</span>
+          <span>youremail@gmail.com</span>
+        </p>
+        <p>
+          <span>GitHub:</span>
+          <span>Your GitHub link</span>
+        </p>
+        <p>
+          <span>Twitter/X:</span>
+          <span>Your Twitter/X link</span>
+        </p>
+        <p>
+          <span>LinkedIn:</span>
+          <span>Your LinkedIn link</span>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Your Name — All Rights Reserved</p>
+
+      <p class="powered">
+        Built with <a href="https://rushsite.de/">RushSite⚡</a>
+      </p>
+    </footer>
+
+    <!--Link JavaScript-->
+<script src="app.js"></script>
+  </body>
+</html>
+<!-- 
+You are only allowed to use this template if it was paid for -->
+<!-- 
+Built by Abdulroqib Oladipo -->

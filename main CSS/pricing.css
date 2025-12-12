@@ -125,7 +125,7 @@ h1 {
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 10px 10px 30px 10px ;
 }
 #pricing {
   margin: 40px 20px;

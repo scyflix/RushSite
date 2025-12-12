@@ -115,7 +115,7 @@ a.btn {
   position: relative;
   display: inline-block;
   background-color: var(--accent1);
-  padding: 14px 36px;
+  padding: 18px 36px;
   margin: 10px;
   color: var(--button-text-color);
   font-weight: 600;
@@ -131,6 +131,7 @@ a.btn:hover {
   transform: translateY(-3px);
 }
 #templatesBtn {
+  margin-top: 22px;
   background-color: var(--accent2);
   box-shadow: 0 5px 15px rgba(45, 96, 51, 0.502);
 }
