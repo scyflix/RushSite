@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Icons -->
@@ -29,24 +29,25 @@
         --bg: #0d0d0d;
         --text-color: #ffffff;
       }
-      html{
-        box-sizing: border-box;
+      html, body {
         margin: 0;
         padding: 0;
-      }
+width: 100vw;     
+height: 100dvh; 
+}
       body {
-        font-family: "Poppins", sans-serif;
-        line-height: 1;
-        position: relative;
-        background: var(--bg);
-        color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+background: var(--bg);
+color: var(--text-color);
+      }
+      main {
         text-align: center;
       }
       p {
         text-align: center;
       }
       #notFound {
-        font-size: 15rem;
+        font-size: 14rem;
         background: linear-gradient(
           90deg,
           var(--accent1),
@@ -137,23 +138,25 @@
     </style>
   </head>
   <body>
-    <div id="robot">
-      <div class="robotHead">
-        <div id="eyes">
-          <div class="eye">
-            <div class="eyeball"></div>
+    <main>
+      <div id="robot">
+        <div class="robotHead">
+          <div id="eyes">
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
+            <div class="eye">
+              <div class="eyeball"></div>
+            </div>
           </div>
-          <div class="eye">
-            <div class="eyeball"></div>
-          </div>
+          <div class="mouth"></div>
         </div>
-        <div class="mouth"></div>
       </div>
-    </div>
-    
-    <h1><span id="notFound">404</span></h1>
-    <p>- Page Not Found</p>
-    <p>Gosh! We are lost again 😕.</p>
-    <a href="/">Go Home</a>
+      
+      <h1><span id="notFound">404</span></h1>
+      <p>Page Not Found</p>
+      <p>Gosh! We are lost again 😕.</p>
+      <a href="/">Go Home</a>
+    </main>
   </body>
 </html>
