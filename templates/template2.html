@@ -301,7 +301,7 @@
           width: 95%;
           background-color: var(--project-bg);
           border-radius: 10px;
-          padding: 5px 10px;
+          padding: 5px 3px 5px 10px;
           transition: all 0.5s ease-in;
         }
       }
@@ -337,9 +337,11 @@
       #sidebar {
         display: none;
       }
-
+      #menuIcon {
+        display: none;
+      }
       /* RESPONSIVE DESIGN FOR SMALLER SCREEN WIDTH */
-      @media (max-width: 800px) {
+      @media (max-width: 600px) {
         /* make the name and menu icon stay beside each other */
         header {
           display: flex;
@@ -365,7 +367,7 @@
         /* STYLE SIDEBAR */
         #sidebar {
           backdrop-filter: blur(90px) brightness(20%);
-          width: 70%;
+          width: 80%;
           height: 100%;
           top: 0;
           left: -100%;
@@ -375,11 +377,14 @@
           flex-direction: column;
           justify-content: flex-start;
           align-items: center;
+          transition: left 0.5s ease, opacity 0.5s ease;
+          opacity: 0;
         }
 
         /* ENSURE SIDEBAR SHOWS ON MENU ICON CLICK */
         #sidebar.show {
           left: 0;
+          opacity: 1;
         }
 
         /* STYLE SPAN ELEMENT TO LOOK LIKE MENU ICON */

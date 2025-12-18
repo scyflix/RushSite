@@ -14,7 +14,8 @@ a.templates-btn,
   padding: 10px 20px;
   border-radius: 10px;
   font-weight: 600;
-  transition: border var(--transition), opacity var(--transition), transform var(--transition);
+  transition: border var(--transition), opacity var(--transition),
+    transform var(--transition);
   font-size: 18px;
   border: none;
   margin-top: 10px;
@@ -85,24 +86,6 @@ a.buy-btn {
   object-fit: cover;
   border-radius: 6px;
   transition: all 0.5s ease;
-}
-
-/* Scrollbar styling for .template (cross-browser) */
-.template {
-  /* Firefox */
-  scrollbar-width: thin;
-  scrollbar-color: #4f46e5 #0f172a; /* thumb track */
-}
-
-.template::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  border: 3px solid transparent;
-}
-.template::-webkit-scrollbar-thumb:hover {
-  filter: brightness(0.5);
-}
-.template::-webkit-scrollbar-corner {
-  background: transparent;
 }
 
 /* Text Section */
