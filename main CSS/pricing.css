@@ -1,11 +1,11 @@
 :root {
-  --accent1: #00ff85;
-  --accent2: #1e90ff;
+  --accent1: #00bcd4;
+  --accent2: #6366f1;
   --text-color: #ffffff;
   --heading-color: whitesmoke;
   --primary-button-hover-color: #11b37d;
   --secondary-button-hover-color: #4ca3fb;
-  --button-text-color: #121212;
+  --button-text-color: #020617;
   --card-background-color: #444444;
   --card-border-color: #a7b4c7;
   --hover-border: #ff0099;
@@ -43,12 +43,28 @@ body.popup-active {
 }
 #cancelPopup {
   position: absolute;
-  top: 10px;
-  left: 50px;
+  top: 20px;
+  left: 20px;
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  
 }
+#cancelPopup span {
+  width: 22px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: var(--text-color);
+}
+#cancelPopup span:nth-child(1) {
+    transform: rotate(45deg) translate(3px);
+}
+#cancelPopup span:nth-child(2) {
+    transform: rotate(-45deg) translate(2px);
+}
+
 /* Waitlist Form */
 #waitlistform {
   max-width: 90%;

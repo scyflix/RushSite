@@ -1,11 +1,12 @@
 :root {
-  --accent1: #00ff85;
-  --accent2: #1e90ff;
+  --accent1: #00bcd4;
+  --accent2: #6366f1;
   --text-color: #ffffff;
   --heading-color: whitesmoke;
   --primary-button-hover-color: #11b37d;
-  --secondary-button-hover-color: #4ca3fb;
-  --button-text-color: #121212;
+  --secondary-button-hover-color: #6366f1;
+  --accent1-color: #121212;
+  --accent2-color: #020617;
   --card-background-color: #444444;
   --card-border-color: #a7b4c7;
   --hover-border: #ff0099;
@@ -33,7 +34,7 @@ video {
   margin: 10px;
   width: fit-content;
   padding: 20px;
-  border-radius: 22px 22px 0 22px ;
+  border-radius: 22px 22px 0 22px;
   transition: right 0.7s ease, left 0.7s ease;
   animation: moveLeft 10s forwards infinite, dance 1s ease infinite;
 }
@@ -117,13 +118,13 @@ a.btn {
   background-color: var(--accent1);
   padding: 18px 36px;
   margin: 10px;
-  color: var(--button-text-color);
   font-weight: 600;
   border-radius: var(--radius);
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(78, 70, 229, 0.089);
   transition: transform 0.4s ease, box-shadow 0.4s ease,
-    background-color 0.4s ease;
+  background-color 0.4s ease;
+  color: var(--accent1-color);
 }
 
 a.btn:hover {
@@ -132,6 +133,7 @@ a.btn:hover {
 }
 #templatesBtn {
   margin-top: 22px;
+  color: var(--accent2-color);
   background-color: var(--accent2);
   box-shadow: 0 5px 15px rgba(45, 96, 51, 0.502);
 }
@@ -206,7 +208,6 @@ ol {
   margin: 10px 40px 20px;
 }
 @media (max-width: 600px) {
- 
   #video {
     flex-direction: column;
   }

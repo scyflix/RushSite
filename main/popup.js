@@ -9,7 +9,7 @@ function closePopup() {
   PopupContainer.classList.add("cancel");
   setTimeout(() => {
     PopupContainer.style.display = "none";
-  }, 2000);
+  }, 500);
   document.body.classList.remove("popup-active");
 }
 cancelBtn.addEventListener("click", () => {
