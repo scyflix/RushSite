@@ -9,8 +9,7 @@ function cancelIcon() {
   topbar.classList.add("crossForward");
   bottombar.classList.add("crossBackward");
   middlebar.classList.add("remove");
-    body.classList.add("scrollLock");
-
+  body.classList.add("scrollLock");
 }
 
 //sidebar cancel icon remove
@@ -18,7 +17,7 @@ function cancelIconRemove() {
   topbar.classList.remove("crossForward");
   bottombar.classList.remove("crossBackward");
   middlebar.classList.remove("remove");
-    body.classList.remove("scrollLock");
+  body.classList.remove("scrollLock");
 }
 
 //sidebar toggle
@@ -45,7 +44,8 @@ for (let i = 0; i < 3; i++) {
   body.classList.add("scrollLock");
 }
 
-setTimeout(() => {
+window.addEventListener("load", () => {
   preloader.classList.add("noDisplay");
   body.classList.remove("scrollLock");
-}, 1500);
+})
+
