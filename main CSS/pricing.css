@@ -137,9 +137,8 @@ h1 {
 
 #container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  gap: 14px;
   flex-wrap: wrap;
   margin: 10px 10px 30px 10px ;
 }
@@ -147,7 +146,6 @@ h1 {
   margin: 40px 20px;
 }
 .price {
-  flex: 1;
   background-color: var(--card-background-color);
   color: var(--text-color);
   box-shadow: 0 4px 10px rgba(255, 246, 246, 0.285);
@@ -156,6 +154,8 @@ h1 {
   padding: 10px 40px;
   transition: transform 0.5s ease, border-color 0.5s ease;
   max-width: 600px;
+  min-width: 400px;
+  margin: 20px 0;
 }
 
 .price:hover {
@@ -218,9 +218,8 @@ a.priceBtn:hover::after {
   opacity: 1;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   #container {
-    flex-direction: column;
     margin: 10px;
   }
 

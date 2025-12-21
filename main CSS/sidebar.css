@@ -1,12 +1,10 @@
-:root {
-  --iconbg: #00bcd4;
-  --gap: 4px;
+.sidebar {
   --sidebarbg: #272727;
-  --borderColor: #6366f1;
   --hoverbg: #00000066;
   --nav-bg: #121111;
-  --radius: 12px;
-  --transition: 0.5s ease;
+}
+.menuIcon {
+  --iconbg: #00bcd4;
 }
 .menuIcon,
 .sidebar {
@@ -57,14 +55,14 @@
 
   #sidebarContainer {
     position: fixed;
-    right: -100%;
-    transition: right var(--transition);
+    transform: translateX(100%);
+    transition: transform var(--transition);
     width: 100%;
     height: 100dvh;
     z-index: 2;
   }
   #sidebarContainer.show {
-    right: 0;
+    transform: translateX(0);
     background: rgba(0, 0, 0, 0.7);
   }
   .sidebar {
@@ -74,6 +72,7 @@
     background: var(--sidebarbg);
     height: 100%;
     display: block;
+    width: 80%;
   }
   .sidebar nav {
     display: flex;
@@ -95,18 +94,11 @@
     transition: background-color var(--transition), border var(--transition);
   }
   .sidebar nav a:hover {
-    border: 2px solid #fafafa;
+    border-color: #fafafa;
     background-color: var(--hoverbg);
   }
-}
-
-@media (min-width: 600px) {
-  .sidebar {
-    width: 50%;
-  }
-}
-@media (max-width: 600px) {
-  .sidebar {
-    width: 80%;
+  .sidebar nav a:focus-visible {
+    outline: 2px solid var(--iconbg);
+    outline-offset: 3px;
   }
 }
