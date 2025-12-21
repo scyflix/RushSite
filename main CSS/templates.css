@@ -1,9 +1,9 @@
 :root {
   --card-background-color: #444444;
   --primary-text: #ffffff;
---accent1: #00bcd4;
+  --accent1: #00bcd4;
   --accent2: #6366f1;
-  --button-text-color: #121212;
+  --button-text-color: #020617;
   --transition: 0.6 ease;
 }
 a.templates-btn,
@@ -15,7 +15,7 @@ a.templates-btn,
   border-radius: 10px;
   font-weight: 600;
   transition: border var(--transition), opacity var(--transition),
-    transform var(--transition);
+  transform var(--transition);
   font-size: 18px;
   border: none;
   margin-top: 10px;

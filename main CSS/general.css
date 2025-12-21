@@ -150,11 +150,15 @@ a .brand {
   font-size: 13px;
   font-weight: 700;
 }
+
 h2 {
+  color: var(--heading-color);
+  text-align: center;
   font-size: var(--fs-h2);
   text-align: center;
   margin: 40px 0;
 }
+
 section {
   border: 1px solid var(--surface-light);
   background-color: var(--section-bg);
