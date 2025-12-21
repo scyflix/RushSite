@@ -3,11 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* Scrollbar styling for website (cross-browser) */
-html {
-  scroll-behavior: smooth;
+html, body {
   margin: 0;
   padding: 0;
+
+}
+/* Scrollbar styling for website (cross-browser) */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
   /* Firefox */
   scrollbar-color: #4f46e5 #0f172a; /* thumb track */
 }
@@ -56,10 +60,9 @@ html::-webkit-scrollbar-corner {
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   font-family: "Poppins", sans-serif;
   font-size: var(--fs-body);
-  margin: 0;
   background: var(--bg);
   color: var(--primary-text);
   line-height: 1.6;
@@ -140,7 +143,7 @@ p {
 }
 header {
   background: var(--header-bg);
-  padding: calc(var(--spacing) / 2) 0;
+  padding: calc(var(--spacing) / 2) var(--spacing);
   position: sticky;
   top: 0;
   z-index: 100;

@@ -39,7 +39,7 @@ body {
   padding: 0 20px;
 }
 body.popup-active {
-  overflow: hidden;
+  position: fixed;
 }
 /* Navigation */
 nav {
@@ -247,9 +247,8 @@ footer {
   z-index: 200;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
   width: 100%;
-  height: 100vh;
   height: 100dvh; /* for iOS notch accuracy */
   display: flex;
 }
@@ -264,7 +263,6 @@ footer {
   to {
     opacity: 0;
     transform: translateY(100px);
-    z-index: -3;
   }
 }
 #cancelPopup {
@@ -292,7 +290,7 @@ footer {
 
 /* Waitlist Form */
 #waitlistform {
-  max-width: 90%;
+  max-width: fit-content;
   position: absolute;
   text-align: center;
   z-index: 200;

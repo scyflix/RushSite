@@ -1,15 +1,8 @@
-:root {
-  --card-background-color: #444444;
-  --primary-text: #ffffff;
-  --accent1: #00bcd4;
-  --accent2: #6366f1;
-  --button-text-color: #020617;
-  --transition: 0.6 ease;
-}
+
 a.templates-btn,
 .buy-btn {
   display: inline-block;
-  color: var(--button-text-color);
+  color: var(--accent2-color);
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 10px;
