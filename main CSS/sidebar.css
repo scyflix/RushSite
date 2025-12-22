@@ -10,7 +10,7 @@
 .sidebar {
   display: none;
 }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   header {
     padding: 0;
   }
@@ -20,7 +20,7 @@
 
   .menuIcon {
     position: absolute;
-    right: 16px;
+    right: 22px;
     cursor: pointer;
     display: flex;
     align-items: center;

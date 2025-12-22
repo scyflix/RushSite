@@ -15,3 +15,10 @@ function closePopup() {
 cancelBtn.addEventListener("click", () => {
   closePopup();
 });
+
+const heroImgContainer = document.getElementById("heroImg");
+const heroImg = document.querySelector(".img");
+
+heroImg.addEventListener("click", () => {
+  heroImgContainer.classList.add("displayImg");
+});
