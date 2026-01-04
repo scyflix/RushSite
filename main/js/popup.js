@@ -4,6 +4,7 @@ const cancelBtn = document.getElementById("cancelPopup");
 if (!PopupContainer.classList.contains("cancel")) {
   document.body.classList.add("popup-active");
 }
+
 // Function to close the popup
 function closePopup() {
   PopupContainer.classList.add("cancel");

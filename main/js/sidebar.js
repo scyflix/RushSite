@@ -4,6 +4,7 @@ const topbar = document.getElementById("topbar");
 const middlebar = document.getElementById("middlebar");
 const bottombar = document.getElementById("bottombar");
 const body = document.body;
+
 //Sidebar cancel icon
 function cancelIcon() {
   topbar.classList.add("crossForward");
@@ -47,5 +48,4 @@ for (let i = 0; i < 3; i++) {
 window.addEventListener("load", () => {
   preloader.classList.add("noDisplay");
   body.classList.remove("scrollLock");
-})
-
+});

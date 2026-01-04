@@ -10,7 +10,7 @@
 .sidebar {
   display: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 780px) {
   header {
     padding: 0;
   }
@@ -72,7 +72,7 @@
     background: var(--sidebarbg);
     height: 100%;
     display: block;
-    width: 80%;
+    width: 60%;
   }
   .sidebar nav {
     display: flex;
@@ -100,5 +100,11 @@
   .sidebar nav a:focus-visible {
     outline: 2px solid var(--iconbg);
     outline-offset: 3px;
+  }
+}
+
+@media(max-width: 600px) {
+  .sidebar {
+    width: 80%;
   }
 }

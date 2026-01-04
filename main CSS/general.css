@@ -244,7 +244,7 @@ footer p {
 }
 #scybudApps .container {
   display: flex;
-  flex-direction: column; /* FIXED HERE */
+  flex-direction: column; 
   align-items: center;
   justify-content: center;
   transition: transform 0.5s ease;
