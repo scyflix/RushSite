@@ -1,22 +1,16 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-
 }
 /* Scrollbar styling for website (cross-browser) */
 html {
-  box-sizing: border-box;
   scroll-behavior: smooth;
   /* Firefox */
   scrollbar-color: #4f46e5 #0f172a; /* thumb track */
-}
-html::-webkit-scrollbar {
-  width: 10px;
 }
 html::-webkit-scrollbar-track {
   background: #0f172a;
@@ -244,7 +238,7 @@ footer p {
 }
 #scybudApps .container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: transform 0.5s ease;

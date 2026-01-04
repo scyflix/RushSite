@@ -25,13 +25,13 @@
     display: flex;
     align-items: center;
     gap: var(--gap);
+    border: 1px solid var(--borderColor);
     flex-direction: column;
-    border: 2px solid var(--borderColor);
     padding: 6px;
     border-radius: calc(var(--radius) / 3);
   }
   .menuIcon:hover {
-    background: var(--hoverbg);
+    opacity: 0.7;
   }
   .menuIcon span {
     width: 24px;
@@ -103,7 +103,7 @@
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .sidebar {
     width: 80%;
   }

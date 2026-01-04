@@ -239,9 +239,8 @@ ol {
     display: block;
     text-align: center;
     height: auto;
-    max-width: 90%;
+    width: 100%;
     margin: calc(var(--spacing) * 2) auto;
-    border: 1px solid var(--surface-light);
   }
   #hero h1 {
     text-align: center;
