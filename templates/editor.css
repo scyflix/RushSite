@@ -39,9 +39,11 @@ div#header {
   top: 20px;
   right: 20px;
   color: #fff;
+  border: none;
   border-radius: 6px;
   padding: 8px 12px;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 .actionbtn:hover {
   opacity: 0.8;
